@@ -1,15 +1,16 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://w3id.org/dimat/ontologies/HouseAnimal> a owl:Class ;
+    rdfs:label "Pets modified"^^xsd:string ;
+    dcterms:contributor "Kiran"^^xsd:string ;
+    dcterms:description "Domestic animal"^^xsd:string ;
+    foaf:mbox "kiran.kumaraswamy@iwm.fraunhofer.de"^^xsd:string .
+
 <https://w3id.org/dimat/ontologies/HouseAnimal1> a owl:Class ;
     rdfs:label "Pets1"^^xsd:string ;
     dcterms:description "fewfgwegewgeg"^^xsd:string .
-
-<https://w3id.org/dimat/ontologies/HouseAnimal2> a owl:Class ;
-    rdfs:label "Pets2 modified"^^xsd:string ;
-    dcterms:description "r2t22q"^^xsd:string ;
-    dcterms:source "24TY43TY"^^xsd:string ;
-    rdfs:comment "T"^^xsd:string .
 
