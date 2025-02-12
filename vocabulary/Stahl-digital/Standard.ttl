@@ -1,0 +1,8 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/steel/ProcessOntology/Standard> a owl:Class ;
+    rdfs:label "Standard modified"^^xsd:string ;
+    rdfs:comment "Standard as described by ISO / DIN / etc"^^xsd:string .
+
