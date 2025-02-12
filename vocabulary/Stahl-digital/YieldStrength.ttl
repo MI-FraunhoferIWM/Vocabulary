@@ -4,6 +4,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/steel/ProcessOntology/YieldStrength> a owl:Class ;
-    rdfs:label "YieldStrength modified 123"^^xsd:string ;
+    rdfs:label "YieldStrength modified"^^xsd:string ;
     dcterms:description "\"when the metallic material exhibits a yield phenomenon, stress corresponding to the point reached during the test at which plastic deformation occurs without any increase in the force\" [DIN EN ISO 6892-1, 3.10.2]"^^xsd:string .
 
