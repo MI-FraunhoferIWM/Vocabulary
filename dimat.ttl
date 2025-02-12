@@ -7,3 +7,9 @@
     rdfs:label "Pets1"^^xsd:string ;
     dcterms:description "fewfgwegewgeg"^^xsd:string .
 
+<https://w3id.org/dimat/ontologies/HouseAnimal2> a owl:Class ;
+    rdfs:label "Pets2 modified"^^xsd:string ;
+    dcterms:description "r2t22q"^^xsd:string ;
+    dcterms:source "24TY43TY"^^xsd:string ;
+    rdfs:comment "T"^^xsd:string .
+
