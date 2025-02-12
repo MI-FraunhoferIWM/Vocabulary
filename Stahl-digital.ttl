@@ -4,10 +4,18 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/steel/ProcessOntology/DamageTreatment> a owl:Class ;
-    rdfs:label "DamageTreatment"^^xsd:string ;
+    rdfs:label "DamageTreatment modified"^^xsd:string ;
     dcterms:description """interpreted digit-wise as follows: DTYP = [????] = ??+10×??
 M.EQ.0: Damage is accumulated, but there is no coupling to flow stress and no failure.
 M.EQ.1: Damage is accumulated, and element failure occurs for ?? = 1. Coupling of damage to flow stress depending on parameters.
 N.EQ.0: Equivalent plastic strain is the driving quantity for the damage.
 N.GT.0: The Nth additional history variable is the driving quantity for damage."""^^xsd:string .
+
+<https://w3id.org/steel/ProcessOntology/Standard> a owl:Class ;
+    rdfs:label "Standard modified"^^xsd:string ;
+    rdfs:comment "Standard as described by ISO / DIN / etc"^^xsd:string .
+
+<https://w3id.org/steel/ProcessOntology/YieldStrength> a owl:Class ;
+    rdfs:label "YieldStrength modified"^^xsd:string ;
+    dcterms:description "\"when the metallic material exhibits a yield phenomenon, stress corresponding to the point reached during the test at which plastic deformation occurs without any increase in the force\" [DIN EN ISO 6892-1, 3.10.2]"^^xsd:string .
 

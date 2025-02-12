@@ -4,7 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/steel/ProcessOntology/DamageTreatment> a owl:Class ;
-    rdfs:label "DamageTreatment"^^xsd:string ;
+    rdfs:label "DamageTreatment modified"^^xsd:string ;
     dcterms:description """interpreted digit-wise as follows: DTYP = [????] = ??+10×??
 M.EQ.0: Damage is accumulated, but there is no coupling to flow stress and no failure.
 M.EQ.1: Damage is accumulated, and element failure occurs for ?? = 1. Coupling of damage to flow stress depending on parameters.
