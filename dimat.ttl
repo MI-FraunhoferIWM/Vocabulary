@@ -6,6 +6,3 @@
     dcterms:description "efewfg4efg"^^xsd:string ;
     rdfs:comment "gregreg"^^xsd:string .
 
-<https://w3id.org/dimat/ontologies/HouseAnimal1> rdfs:label "Pets1"^^xsd:string ;
-    dcterms:description "thrt6hrthrth"^^xsd:string .
-
