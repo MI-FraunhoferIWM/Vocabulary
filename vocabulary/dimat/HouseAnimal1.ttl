@@ -1,9 +1,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/dimat/ontologies/HouseAnimal1> a owl:Class ;
-    rdfs:label "Pets1"^^xsd:string ;
-    dcterms:description "fewfgwegewgeg"^^xsd:string .
+<https://w3id.org/dimat/ontologies/HouseAnimal1> rdfs:label "Pets1"^^xsd:string ;
+    dcterms:description "thrt6hrthrth"^^xsd:string .
 
