@@ -7,6 +7,6 @@
 <https://w3id.org/aid4greenest/ontologies/gleeble/ThermoelementTemperature> a owl:Class ;
     rdfs:label "TC1 (c) "^^xsd:string ;
     dcterms:contributor "Lukas Morand"^^xsd:string ;
-    dcterms:description "Measured temperature at thermo sensor"^^xsd:string ;
+    dcterms:description "Measured temperature at thermo sensor modified"^^xsd:string ;
     foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
 
