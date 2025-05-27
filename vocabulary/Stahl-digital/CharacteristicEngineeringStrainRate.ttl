@@ -1,9 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://w3id.org/steel/ProcessOntology/CharacteristicEngineeringStrainRate> a skos:Concept ;
-    rdfs:label "CharacteristicEngineeringStrainRate"^^xsd:string ;
-    dcterms:description "\"Mean value of the time-dependent engineering strain rate in the range between start of yield or 1% strain and strain at maximum force\" [Authors]"^^xsd:string .
-
