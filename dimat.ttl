@@ -1,8 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://w3id.org/dimat/ontologies/HouseAnimal> rdfs:label "Pets"^^xsd:string ;
-    dcterms:description "efewfg4efg"^^xsd:string ;
-    rdfs:comment "gregreg"^^xsd:string .
-
