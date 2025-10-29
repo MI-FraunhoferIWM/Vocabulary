@@ -41,6 +41,21 @@
     dcterms:description "csefef abc"^^xsd:string ;
     foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
 
+<https://w3id.org/aid4greenest/ontologies/gleeble/Pets1> a owl:Class ;
+    rdfs:label "House animal1"^^xsd:string ;
+    dcterms:description "y53yt5"^^xsd:string ;
+    rdfs:comment "y5y5y"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/Pets2> a owl:Class ;
+    rdfs:label "House animal2"^^xsd:string ;
+    dcterms:description "fewtfe"^^xsd:string ;
+    rdfs:comment "fewrrtf"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/Pets3> a owl:Class ;
+    rdfs:label "House animal 3"^^xsd:string ;
+    dcterms:description "t4t"^^xsd:string ;
+    rdfs:comment "t4"^^xsd:string .
+
 <https://w3id.org/aid4greenest/ontologies/gleeble/SetTemperature> a owl:Class ;
     rdfs:label "Ptemp"^^xsd:string ;
     dcterms:contributor "Lukas Morand"^^xsd:string ;

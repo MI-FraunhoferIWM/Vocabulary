@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/Pets1> a owl:Class ;
+    rdfs:label "House animal1"^^xsd:string ;
+    dcterms:description "y53yt5"^^xsd:string ;
+    rdfs:comment "y5y5y"^^xsd:string .
+
