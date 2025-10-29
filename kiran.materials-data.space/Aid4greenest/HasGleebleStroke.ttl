@@ -4,9 +4,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/aid4greenest/ontologies/gleeble/ExtensometerGaugeLength> a owl:Class ;
-    rdfs:label "LGauge (mm)"^^xsd:string ;
+<https://w3id.org/aid4greenest/ontologies/gleeble/HasGleebleStroke> a owl:DatatypeProperty ;
+    rdfs:label "has Gleeble Stroke"^^xsd:string ;
     dcterms:contributor "Lukas Morand"^^xsd:string ;
-    dcterms:source "DIN EN ISO 6892-1 (engl. version 2017)"^^xsd:string ;
+    dcterms:description "Represents the linear displacement (stroke) applied to a sample during Gleeble thermomechanical testing."^^xsd:string ;
     foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
 

@@ -7,20 +7,71 @@
 <https://w3id.org/aid4greenest/ontologies/gleeble/ExtensometerGaugeLength> a owl:Class ;
     rdfs:label "LGauge (mm)"^^xsd:string ;
     dcterms:contributor "Lukas Morand"^^xsd:string ;
-    dcterms:description "Description"^^xsd:string ;
     dcterms:source "DIN EN ISO 6892-1 (engl. version 2017)"^^xsd:string ;
+    foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/Force> a owl:Class ;
+    rdfs:label "Force (kN)"^^xsd:string ;
+    dcterms:contributor "Lukas Morand"^^xsd:string ;
+    dcterms:description "The force measured by the load cell."^^xsd:string ;
+    dcterms:source "DIN EN ISO 6892-1 und DIN EN ISO 6892-2"^^xsd:string ;
+    rdfs:comment "wefefewfefe"^^xsd:string ;
+    foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/GleebleStroke> a owl:Class ;
+    rdfs:label "Stroke (cm)"^^xsd:string ;
+    dcterms:contributor "Lukas Morand"^^xsd:string ;
+    dcterms:description "the distance the sample is compressed or elongated during a test."^^xsd:string ;
+    foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/HasGleebleStroke> a owl:DatatypeProperty ;
+    rdfs:label "has Gleeble Stroke"^^xsd:string ;
+    dcterms:contributor "Lukas Morand"^^xsd:string ;
+    dcterms:description "Represents the linear displacement (stroke) applied to a sample during Gleeble thermomechanical testing."^^xsd:string ;
+    foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/HeatingOutput> a owl:Class ;
+    rdfs:label "PowAngle (deg)"^^xsd:string ;
+    dcterms:contributor "Lukas Morand"^^xsd:string ;
+    foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/HouseAnimal> a owl:Class ;
+    rdfs:label "Pets"^^xsd:string ;
+    dcterms:contributor "Kiran Kumaraswamy"^^xsd:string ;
+    dcterms:description "csefef abc"^^xsd:string ;
     foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
 
 <https://w3id.org/aid4greenest/ontologies/gleeble/SetTemperature> a owl:Class ;
     rdfs:label "Ptemp"^^xsd:string ;
     dcterms:contributor "Lukas Morand"^^xsd:string ;
-    dcterms:description "Temperature set (programmed) by the user modified again"^^xsd:string ;
+    dcterms:description "Temperature set (programmed) by the user"^^xsd:string ;
+    foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/TestingTime> a owl:Class ;
+    rdfs:label "Time (sec)"^^xsd:string ;
+    dcterms:contributor "Lukas Morand"^^xsd:string ;
+    dcterms:description "The time when the data point is recorded in relation to the start."^^xsd:string ;
+    dcterms:source "DIN EN ISO 6892-1 (engl. version 2017)"^^xsd:string ;
+    foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/ThermoelementTemperature> a owl:Class ;
+    rdfs:label "TC1 (c) "^^xsd:string ;
+    dcterms:contributor "Lukas Morand"^^xsd:string ;
+    dcterms:description "Measured temperature at thermo sensor"^^xsd:string ;
     foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
 
 <https://w3id.org/aid4greenest/ontologies/gleeble/TrueStrain> a owl:Class ;
     rdfs:label "Strain"^^xsd:string ;
     dcterms:contributor "Lukas Morand"^^xsd:string ;
-    dcterms:description "The logarithmic strain provides the correct measure of the final strain when deformation takes place in a series of increments, taking into account the influence of the strain path modified again"^^xsd:string ;
+    dcterms:description "The logarithmic strain provides the correct measure of the final strain when deformation takes place in a series of increments, taking into account the influence of the strain path"^^xsd:string ;
     dcterms:source "https://en.wikipedia.org/wiki/Strain_(mechanics)#Logarithmic_strain"^^xsd:anyURI ;
+    foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/TrueStress123> a owl:Class ;
+    rdfs:label "Stress (MPa)"^^xsd:string ;
+    dcterms:contributor "Lukas Morand"^^xsd:string ;
+    dcterms:description "The Cauchy stress (or true stress) is a measure of the force acting on an element of area in the deformed configuration"^^xsd:string ;
+    dcterms:source "https://en.wikipedia.org/wiki/Alternative_stress_measures#Cauchy_stress"^^xsd:anyURI ;
+    rdfs:comment "dscdcdscs"^^xsd:string ;
     foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
 

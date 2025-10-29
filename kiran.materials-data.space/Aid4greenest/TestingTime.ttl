@@ -4,9 +4,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/aid4greenest/ontologies/gleeble/ExtensometerGaugeLength> a owl:Class ;
-    rdfs:label "LGauge (mm)"^^xsd:string ;
+<https://w3id.org/aid4greenest/ontologies/gleeble/TestingTime> a owl:Class ;
+    rdfs:label "Time (sec)"^^xsd:string ;
     dcterms:contributor "Lukas Morand"^^xsd:string ;
+    dcterms:description "The time when the data point is recorded in relation to the start."^^xsd:string ;
     dcterms:source "DIN EN ISO 6892-1 (engl. version 2017)"^^xsd:string ;
     foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
 

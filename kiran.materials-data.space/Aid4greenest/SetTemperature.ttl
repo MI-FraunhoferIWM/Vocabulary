@@ -7,6 +7,6 @@
 <https://w3id.org/aid4greenest/ontologies/gleeble/SetTemperature> a owl:Class ;
     rdfs:label "Ptemp"^^xsd:string ;
     dcterms:contributor "Lukas Morand"^^xsd:string ;
-    dcterms:description "Temperature set (programmed) by the user modified again"^^xsd:string ;
+    dcterms:description "Temperature set (programmed) by the user"^^xsd:string ;
     foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
 
