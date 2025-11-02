@@ -15,14 +15,6 @@
 @prefix mapro: <https://w3id.org/pmd/mapro#> .
 @base <https://example.org/alloy/EN_AW_2618A/owl#> .
 
-<https://example.org/alloy/EN_AW_2618A/owl> rdf:type owl:Ontology ;
-                                             owl:imports <https://w3id.org/pmd/co/3.0.0-alpha3> ;
-                                             <http://purl.org/dc/terms/creator> "Generated example" ;
-                                             <http://purl.org/dc/terms/description> "Small PMDco-compliant extension ontology and example individuals modeling alloy chemical composition (weight % ranges)." ;
-                                             <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                                             <http://purl.org/dc/terms/title> "EN AW-2618A composition model (example) - PMDco extension" ;
-                                             owl:versionInfo "v1.0-example" .
-
 
 #################################################################
 #    Object Properties
