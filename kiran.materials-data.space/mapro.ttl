@@ -1,0 +1,165 @@
+@prefix : <https://example.org/alloy/EN_AW_2618A/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ro: <http://www.obofoundry.org/ro/ro.owl#> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO_> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI_> .
+@prefix mapro: <https://w3id.org/pmd/mapro#> .
+@base <https://example.org/alloy/EN_AW_2618A/owl#> .
+
+<https://example.org/alloy/EN_AW_2618A/owl> rdf:type owl:Ontology ;
+                                             owl:imports <https://w3id.org/pmd/co/3.0.0-alpha3> ;
+                                             <http://purl.org/dc/terms/creator> "Generated example" ;
+                                             <http://purl.org/dc/terms/description> "Small PMDco-compliant extension ontology and example individuals modeling alloy chemical composition (weight % ranges)." ;
+                                             <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                             <http://purl.org/dc/terms/title> "EN AW-2618A composition model (example) - PMDco extension" ;
+                                             owl:versionInfo "v1.0-example" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/pmd/mapro#hasMeasurement
+mapro:hasMeasurement rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/mapro#hasTestTemperature
+mapro:hasTestTemperature rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/pmd/mapro#hasDirection
+mapro:hasDirection rdf:type owl:DatatypeProperty ;
+                   rdfs:label "has direction"@en .
+
+
+###  https://w3id.org/pmd/mapro#hasTestNumber
+mapro:hasTestNumber rdf:type owl:DatatypeProperty ;
+                    rdfs:label "has test number"@en .
+
+
+###  https://w3id.org/pmd/mapro#performedAccordingTo
+mapro:performedAccordingTo rdf:type owl:DatatypeProperty ;
+                           rdfs:label "performed according to"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/pmd/co/PMD_0000017
+pmd:PMD_0000017 rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/mapro#BrinellHardnessTest
+mapro:BrinellHardnessTest rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:PMD_0000776 ;
+                          rdfs:label "Brinell hardness test"@en ;
+                          skos:definition "A process determining the resistance of a material to indentation."@en .
+
+
+###  https://w3id.org/pmd/mapro#Elongation
+mapro:Elongation rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001933> ;
+                 rdfs:label "Elongation"@en .
+
+
+###  https://w3id.org/pmd/mapro#EnergyOfImpact
+mapro:EnergyOfImpact rdf:type owl:Class ;
+                     rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001933> ;
+                     rdfs:label "Energy of impact"@en .
+
+
+###  https://w3id.org/pmd/mapro#ImpactTest
+mapro:ImpactTest rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:PMD_0000788 ;
+                 rdfs:label "ImpactTest"@en ;
+                 skos:definition "A process determining the energy absorbed by a material during fracture (Charpy impact test)."@en .
+
+
+###  https://w3id.org/pmd/mapro#MechanicalTest
+mapro:MechanicalTest rdf:type owl:Class ;
+                     rdfs:label "Mechanical test"@en .
+
+
+###  https://w3id.org/pmd/mapro#ReductionOfArea
+mapro:ReductionOfArea rdf:type owl:Class ;
+                      rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001933> ;
+                      rdfs:label "Reduction of area"@en .
+
+
+###  https://w3id.org/pmd/mapro#TensileStrength
+mapro:TensileStrength rdf:type owl:Class ;
+                      rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001933> ;
+                      rdfs:label "Tensile strength"@en .
+
+
+###  https://w3id.org/pmd/mapro#TensileTest
+mapro:TensileTest rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:PMD_0000974 ;
+                  rdfs:label "TensileTest"@en ;
+                  skos:definition "A process that measures yield strength, tensile strength, elongation, and reduction of area, performed according to standards like ASTM A370."@en .
+
+
+###  https://w3id.org/pmd/mapro#TestDirection
+mapro:TestDirection rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001930> ;
+                    rdfs:label "Test direction"@en ;
+                    skos:prefLabel "Direction"@en .
+
+
+###  https://w3id.org/pmd/mapro#TestNumber
+mapro:TestNumber rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:PMD_0000017 ;
+                 rdfs:label "Test number"@en .
+
+
+###  https://w3id.org/pmd/mapro#TestSpecimen
+mapro:TestSpecimen rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0100051> ;
+                   rdfs:label "TestSpecimen"@en .
+
+
+###  https://w3id.org/pmd/mapro#YieldStrength
+mapro:YieldStrength rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001933> ;
+                    rdfs:label "Yield strength"@en ;
+                    skos:definition "Property representing the stress at which a material begins to deform plastically."@en .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
