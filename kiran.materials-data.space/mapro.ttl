@@ -23,29 +23,6 @@
                                              <http://purl.org/dc/terms/title> "EN AW-2618A composition model (example) - PMDco extension" ;
                                              owl:versionInfo "v1.0-example" .
 
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:AnnotationProperty .
-
 
 #################################################################
 #    Object Properties
@@ -81,10 +58,6 @@ mapro:performedAccordingTo rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
-
-###  https://w3id.org/pmd/co/PMD_0000017
-pmd:PMD_0000017 rdf:type owl:Class .
-
 
 ###  https://w3id.org/pmd/mapro#BrinellHardnessTest
 mapro:BrinellHardnessTest rdf:type owl:Class ;
