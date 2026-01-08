@@ -34,6 +34,21 @@
     dcterms:description "the distance the sample is compressed or elongated during a test."^^xsd:string ;
     foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
 
+<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeblematerial1> a owl:Class ;
+    rdfs:label "Gleeble material 1"^^xsd:string ;
+    dcterms:description "Gleeble material1"^^xsd:string ;
+    dcterms:identifier "Gleeblematerial1"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeblematerial2> a owl:Class ;
+    rdfs:label "Gleeble material 2"^^xsd:string ;
+    dcterms:description "Gleeble material2"^^xsd:string ;
+    dcterms:identifier "Gleeblematerial2"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeblematerial3> a owl:Class ;
+    rdfs:label "Gleeble material 3"^^xsd:string ;
+    dcterms:description "Gleeble material3"^^xsd:string ;
+    dcterms:identifier "Gleeblematerial3"^^xsd:string .
+
 <https://w3id.org/aid4greenest/ontologies/gleeble/HasGleebleStroke> a owl:DatatypeProperty ;
     rdfs:label "has Gleeble Stroke"^^xsd:string ;
     dcterms:contributor "Lukas Morand"^^xsd:string ;
@@ -99,4 +114,9 @@
     dcterms:source "https://en.wikipedia.org/wiki/Alternative_stress_measures#Cauchy_stress"^^xsd:anyURI ;
     rdfs:comment "dscdcdscs"^^xsd:string ;
     foaf:mbox "lukas.morand@iwm.fraunhofer.de"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/relation1> a owl:ObjectProperty ;
+    rdfs:label "relation1"^^xsd:string ;
+    dcterms:description "relation1"^^xsd:string ;
+    dcterms:identifier "relation1"^^xsd:string .
 
