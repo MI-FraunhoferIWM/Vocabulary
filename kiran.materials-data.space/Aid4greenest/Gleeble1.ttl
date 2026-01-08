@@ -4,7 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble1> a owl:Class ;
-    rdfs:label "Gleeble1"^^xsd:string ;
+    rdfs:label "Gleeble1 updated"^^xsd:string ;
     dcterms:description "Gleeble1"^^xsd:string ;
     dcterms:identifier "Gleeble1"^^xsd:string .
 
