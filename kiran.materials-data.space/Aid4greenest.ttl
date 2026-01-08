@@ -18,8 +18,8 @@
     dcterms:description "Gleeble material1"^^xsd:string ;
     dcterms:identifier "Gleeblematerial1"^^xsd:string .
 
-<https://w3id.org/aid4greenest/ontologies/gleeble/relation1> a owl:ObjectProperty ;
-    rdfs:label "relation1"^^xsd:string ;
-    dcterms:description "relation1"^^xsd:string ;
-    dcterms:identifier "relation1"^^xsd:string .
+<https://w3id.org/aid4greenest/ontologies/gleeble/relation2> a owl:Class ;
+    rdfs:label "relation2"^^xsd:string ;
+    dcterms:description "grweg"^^xsd:string ;
+    dcterms:identifier "relation2"^^xsd:string .
 
