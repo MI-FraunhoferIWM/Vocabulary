@@ -4,6 +4,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://w3id.org/aid4greenest/ontologies/Material1> a owl:Class ;
+    rdfs:label "Material 1"^^xsd:string ;
+    dcterms:description "Material1"^^xsd:string ;
+    dcterms:identifier "Material1"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/Material2> a owl:Class ;
+    rdfs:label "Material 2"^^xsd:string ;
+    dcterms:description "Material2"^^xsd:string ;
+    dcterms:identifier "Material2"^^xsd:string .
+
 <https://w3id.org/aid4greenest/ontologies/gleeble/ExtensometerGaugeLength> a owl:Class ;
     rdfs:label "LGauge (mm)"^^xsd:string ;
     dcterms:contributor "Lukas Morand"^^xsd:string ;
