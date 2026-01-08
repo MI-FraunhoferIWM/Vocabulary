@@ -13,3 +13,23 @@
     dcterms:description "Material2"^^xsd:string ;
     dcterms:identifier "Material2"^^xsd:string .
 
+<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeblematerial1> a owl:Class ;
+    rdfs:label "Gleeble material 1"^^xsd:string ;
+    dcterms:description "Gleeble material1"^^xsd:string ;
+    dcterms:identifier "Gleeblematerial1"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeblematerial2> a owl:Class ;
+    rdfs:label "Gleeble material 2"^^xsd:string ;
+    dcterms:description "Gleeble material2"^^xsd:string ;
+    dcterms:identifier "Gleeblematerial2"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeblematerial3> a owl:Class ;
+    rdfs:label "Gleeble material 3"^^xsd:string ;
+    dcterms:description "Gleeble material3"^^xsd:string ;
+    dcterms:identifier "Gleeblematerial3"^^xsd:string .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/relation1> a owl:ObjectProperty ;
+    rdfs:label "relation1"^^xsd:string ;
+    dcterms:description "relation1"^^xsd:string ;
+    dcterms:identifier "relation1"^^xsd:string .
+
