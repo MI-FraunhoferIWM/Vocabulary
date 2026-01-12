@@ -17,6 +17,11 @@
     ns1:description "Material2" ;
     ns1:identifier "Material2" .
 
+<https://w3id.org/aid4greenest/ontologies/Term1> a owl:Class ;
+    rdfs:label "Term1" ;
+    ns1:description "fewfew" ;
+    ns1:identifier "Term1" .
+
 <https://w3id.org/aid4greenest/ontologies/Testterm> a owl:Class ;
     rdfs:label "Test term modified" ;
     ns1:description "Test term desc" ;
