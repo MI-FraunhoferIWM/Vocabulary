@@ -2,38 +2,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/aid4greenest/ontologies/Base2> a owl:Class ;
-    rdfs:label "Base2" ;
-    ns1:description "Base2" ;
-    ns1:identifier "Base2" .
-
-<https://w3id.org/aid4greenest/ontologies/Material1> a owl:Class ;
-    rdfs:label "Material 1" ;
-    ns1:description "Material1" ;
-    ns1:identifier "Material1" .
-
 <https://w3id.org/aid4greenest/ontologies/Material2> a owl:Class ;
     rdfs:label "Material 2" ;
     ns1:description "Material2" ;
     ns1:identifier "Material2" .
 
-<https://w3id.org/aid4greenest/ontologies/Term1> a owl:Class ;
-    rdfs:label "Term1" ;
-    ns1:description "fewfew" ;
-    ns1:identifier "Term1" .
-
-<https://w3id.org/aid4greenest/ontologies/Testterm> a owl:Class ;
-    rdfs:label "Test term modified" ;
-    ns1:description "Test term desc" ;
-    ns1:identifier "Testterm" .
-
 <https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble1> a owl:Class ;
     rdfs:label "Gleeble1 updated" ;
     ns1:description "Gleeble1" ;
     ns1:identifier "Gleeble1" .
-
-<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble4> a owl:Class ;
-    rdfs:label "Gleeble4 updated" ;
-    ns1:description "Gleeble4" ;
-    ns1:identifier "Gleeble4" .
 
