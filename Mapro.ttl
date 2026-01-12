@@ -6,3 +6,8 @@
     rdfs:label "hasMaterial updated" ;
     ns1:identifier "HasMaterial" .
 
+<https://w3id.org/pmd/mapro/Term1> a owl:Class ;
+    rdfs:label "Term1" ;
+    ns1:description "wegfw" ;
+    ns1:identifier "Term1" .
+
