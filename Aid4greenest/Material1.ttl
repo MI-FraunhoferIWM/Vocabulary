@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/aid4greenest/ontologies/Material1> a owl:Class ;
+    rdfs:label "Material 1" ;
+    dcterms:description "Material1" ;
+    dcterms:identifier "Material1" .
+
