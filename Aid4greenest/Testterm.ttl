@@ -3,7 +3,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <https://w3id.org/aid4greenest/ontologies/Testterm> a owl:Class ;
-    rdfs:label "Test term" ;
+    rdfs:label "Test term modified" ;
     dcterms:description "Test term desc" ;
     dcterms:identifier "Testterm" .
 
