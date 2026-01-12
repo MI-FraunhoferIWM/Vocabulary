@@ -22,6 +22,11 @@
     ns1:description "Material2" ;
     ns1:identifier "Material2" .
 
+<https://w3id.org/aid4greenest/ontologies/Testterm> a owl:Class ;
+    rdfs:label "Test term" ;
+    ns1:description "Test term desc" ;
+    ns1:identifier "Testterm" .
+
 <https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble1> a owl:Class ;
     rdfs:label "Gleeble1 updated" ;
     ns1:description "Gleeble1" ;
