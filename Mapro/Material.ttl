@@ -1,9 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-<https://w3id.org/pmd/mapro/Material> a owl:Class ;
-    rdfs:label "Material modified" ;
-    dcterms:description "descr grgrgr" ;
-    dcterms:identifier "Material" .
-
