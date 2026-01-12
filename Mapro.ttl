@@ -11,3 +11,8 @@
     ns1:description "descr grgrgr" ;
     ns1:identifier "Material" .
 
+<https://w3id.org/pmd/mapro/Term1> a owl:Class ;
+    rdfs:label "Term1 updated" ;
+    ns1:description "rgg" ;
+    ns1:identifier "Term1" .
+
