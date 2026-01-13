@@ -17,3 +17,18 @@
     ns1:description "Base 5" ;
     ns1:identifier "Base5" .
 
+<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble1> a owl:Class ;
+    rdfs:label "Gleeble1" ;
+    ns1:description "Gleeble1" ;
+    ns1:identifier "Gleeble1" .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble2> a owl:Class ;
+    rdfs:label "Gleeble2" ;
+    ns1:description "Gleeble2" ;
+    ns1:identifier "Gleeble2" .
+
+<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble3> a owl:Class ;
+    rdfs:label "Gleeble3" ;
+    ns1:description "Gleeble3" ;
+    ns1:identifier "Gleeble3" .
+
