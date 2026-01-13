@@ -2,8 +2,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/pmd/mapro/Term1> a owl:Class ;
-    rdfs:label "Term1" ;
-    dcterms:description "wegfw" ;
-    dcterms:identifier "Term1" .
+<https://w3id.org/pmd/mapro/Mapro2> a owl:Class ;
+    rdfs:label "Mapro2" ;
+    dcterms:description "Mapro2" ;
+    dcterms:identifier "Mapro2" .
 

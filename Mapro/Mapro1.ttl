@@ -2,7 +2,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/pmd/mapro/HasMaterial> a owl:DatatypeProperty ;
-    rdfs:label "hasMaterial updated" ;
-    dcterms:identifier "HasMaterial" .
+<https://w3id.org/pmd/mapro/Mapro1> a owl:Class ;
+    rdfs:label "Gleeble3" ;
+    dcterms:description "Mapro1" ;
+    dcterms:identifier "Mapro1" .
 

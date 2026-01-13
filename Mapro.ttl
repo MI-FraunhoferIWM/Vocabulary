@@ -2,12 +2,18 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/pmd/mapro/HasMaterial> a owl:DatatypeProperty ;
-    rdfs:label "hasMaterial updated" ;
-    ns1:identifier "HasMaterial" .
+<https://w3id.org/pmd/mapro/Mapro1> a owl:Class ;
+    rdfs:label "Gleeble3" ;
+    ns1:description "Mapro1" ;
+    ns1:identifier "Mapro1" .
 
-<https://w3id.org/pmd/mapro/Term1> a owl:Class ;
-    rdfs:label "Term1" ;
-    ns1:description "wegfw" ;
-    ns1:identifier "Term1" .
+<https://w3id.org/pmd/mapro/Mapro2> a owl:Class ;
+    rdfs:label "Mapro2" ;
+    ns1:description "Mapro2" ;
+    ns1:identifier "Mapro2" .
+
+<https://w3id.org/pmd/mapro/Mapro3> a owl:Class ;
+    rdfs:label "Mapro3" ;
+    ns1:description "Mapro3" ;
+    ns1:identifier "Mapro3" .
 
