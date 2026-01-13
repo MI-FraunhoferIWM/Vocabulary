@@ -3,7 +3,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <https://w3id.org/pmd/mapro/Mapro1> a owl:Class ;
-    rdfs:label "Gleeble3" ;
+    rdfs:label "Mapro1" ;
     dcterms:description "Mapro1" ;
     dcterms:identifier "Mapro1" .
 
