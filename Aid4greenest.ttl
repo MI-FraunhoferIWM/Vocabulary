@@ -2,16 +2,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/aid4greenest/ontologies/Base1> a owl:Class ;
-    rdfs:label "Base 1" ;
-    ns1:description "Base 1" ;
-    ns1:identifier "Base1" .
-
-<https://w3id.org/aid4greenest/ontologies/Base2> a owl:Class ;
-    rdfs:label "Base 2" ;
-    ns1:description "Base 2" ;
-    ns1:identifier "Base2" .
-
 <https://w3id.org/aid4greenest/ontologies/Base3> a owl:Class ;
     rdfs:label "Base 3" ;
     ns1:description "Base 3" ;
