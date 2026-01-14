@@ -1,1 +1,14 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/mapro/Mapro1> a owl:Class ;
+    rdfs:label "Mapro1" ;
+    ns1:description "Mapro1 desc" ;
+    ns1:identifier "Mapro1" .
+
+<https://w3id.org/dsms/mapro/Mapro2> a owl:Class ;
+    rdfs:label "Mapro2" ;
+    ns1:description "Mapro2 Desc" ;
+    ns1:identifier "Mapro2" .
 
