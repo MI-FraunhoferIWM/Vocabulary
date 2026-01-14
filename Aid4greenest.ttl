@@ -2,6 +2,21 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+<https://w3id.org/dsms/aid4greenest/Base3> a owl:Class ;
+    rdfs:label "Base 3" ;
+    ns1:description "Base 3" ;
+    ns1:identifier "Base3" .
+
+<https://w3id.org/dsms/aid4greenest/Base4> a owl:Class ;
+    rdfs:label "Base 4" ;
+    ns1:description "Base 4" ;
+    ns1:identifier "Base4" .
+
+<https://w3id.org/dsms/aid4greenest/Base5> a owl:Class ;
+    rdfs:label "Base 5" ;
+    ns1:description "Base 5" ;
+    ns1:identifier "Base5" .
+
 <https://w3id.org/dsms/aid4greenest/gleeble/Gleeble1> a owl:Class ;
     rdfs:label "Gleeble1" ;
     ns1:description "Gleeble1" ;
