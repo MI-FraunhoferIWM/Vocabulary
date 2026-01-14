@@ -2,32 +2,17 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/aid4greenest/ontologies/Base3> a owl:Class ;
-    rdfs:label "Base 3" ;
-    ns1:description "Base 3" ;
-    ns1:identifier "Base3" .
-
-<https://w3id.org/aid4greenest/ontologies/Base4> a owl:Class ;
-    rdfs:label "Base 4" ;
-    ns1:description "Base 4" ;
-    ns1:identifier "Base4" .
-
-<https://w3id.org/aid4greenest/ontologies/Base5> a owl:Class ;
-    rdfs:label "Base 5" ;
-    ns1:description "Base 5" ;
-    ns1:identifier "Base5" .
-
-<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble1> a owl:Class ;
+<https://w3id.org/dsms/aid4greenest/gleeble/Gleeble1> a owl:Class ;
     rdfs:label "Gleeble1" ;
     ns1:description "Gleeble1" ;
     ns1:identifier "Gleeble1" .
 
-<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble2> a owl:Class ;
+<https://w3id.org/dsms/aid4greenest/gleeble/Gleeble2> a owl:Class ;
     rdfs:label "Gleeble2" ;
     ns1:description "Gleeble2" ;
     ns1:identifier "Gleeble2" .
 
-<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble3> a owl:Class ;
+<https://w3id.org/dsms/aid4greenest/gleeble/Gleeble3> a owl:Class ;
     rdfs:label "Gleeble3" ;
     ns1:description "Gleeble3" ;
     ns1:identifier "Gleeble3" .

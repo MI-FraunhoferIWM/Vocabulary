@@ -2,7 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/aid4greenest/ontologies/gleeble/Gleeble1> a owl:Class ;
+<https://w3id.org/dsms/aid4greenest/gleeble/Gleeble1> a owl:Class ;
     rdfs:label "Gleeble1" ;
     dcterms:description "Gleeble1" ;
     dcterms:identifier "Gleeble1" .
