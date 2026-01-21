@@ -4,6 +4,6 @@
 
 <https://w3id.org/dsms/tensile-testing/hasstrain> a owl:DatatypeProperty ;
     rdfs:label "has strain" ;
-    dcterms:description "has strain updated" ;
+    dcterms:description "has strain updated1" ;
     dcterms:identifier "hasstrain" .
 
