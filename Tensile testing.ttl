@@ -2,15 +2,15 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+<https://w3id.org/dsms/tensile-testing/Newtesnsilestress> a owl:Class ;
+    rdfs:label "Tensile stress new" ;
+    ns1:description "cafewqfe" ;
+    ns1:identifier "Newtesnsilestress" .
+
 <https://w3id.org/dsms/tensile-testing/TensileTest> a owl:Class ;
     rdfs:label "Tensile test modifiedw" ;
     ns1:description "Tensile Test" ;
     ns1:identifier "TensileTest" .
-
-<https://w3id.org/dsms/tensile-testing/Tensilestress> a owl:Class ;
-    rdfs:label "Tensile stress" ;
-    ns1:description "Tensile stress" ;
-    ns1:identifier "Tensilestress" .
 
 <https://w3id.org/dsms/tensile-testing/creep/Device> a owl:Class ;
     rdfs:label "Device" ;
@@ -29,6 +29,6 @@
 
 <https://w3id.org/dsms/tensile-testing/hasstrain> a owl:DatatypeProperty ;
     rdfs:label "has strain" ;
-    ns1:description "has strain updated1" ;
+    ns1:description "has strain updated2" ;
     ns1:identifier "hasstrain" .
 
