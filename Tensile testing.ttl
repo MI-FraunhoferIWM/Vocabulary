@@ -12,6 +12,21 @@
     ns1:description "Tensile stress" ;
     ns1:identifier "Tensilestress" .
 
+<https://w3id.org/dsms/tensile-testing/creep/Device> a owl:Class ;
+    rdfs:label "Device" ;
+    ns1:description "Device" ;
+    ns1:identifier "Device" .
+
+<https://w3id.org/dsms/tensile-testing/creep/Material> a owl:Class ;
+    rdfs:label "Material" ;
+    ns1:description "Material" ;
+    ns1:identifier "Material" .
+
+<https://w3id.org/dsms/tensile-testing/creep/Tesnsilestrain> a owl:Class ;
+    rdfs:label "Tesnsile strain" ;
+    ns1:description "Tesnsile strain" ;
+    ns1:identifier "Tesnsilestrain" .
+
 <https://w3id.org/dsms/tensile-testing/hasstrain> a owl:DatatypeProperty ;
     rdfs:label "has strain" ;
     ns1:description "has strain updated" ;
