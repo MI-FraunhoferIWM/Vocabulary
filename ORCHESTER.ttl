@@ -67,10 +67,11 @@
     ns1:source "https://doi.org/10.1371/journal.pone.0101298" .
 
 <https://w3id.org/dsms/orchester/magnet-predictor/RawMaterialPrice> a owl:Class ;
-    rdfs:label "https://doi.org/10.1371/journal.pone.0101298" ;
+    rdfs:label "RawMaterialPrice" ;
     ns1:contributor "Manuel Enns" ;
     ns1:description "Price of all raw elements added up. Prices from 10/2024. This is only a rough estimate to enable a qualitative comparison and should not be seen as a current exact price estimate" ;
-    ns1:identifier "RawMaterialPrice" .
+    ns1:identifier "RawMaterialPrice" ;
+    ns1:source "https://doi.org/10.1371/journal.pone.0101298" .
 
 <https://w3id.org/dsms/orchester/magnet-predictor/Squareness> a owl:Class ;
     rdfs:label "Squareness" ;
