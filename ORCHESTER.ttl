@@ -1,0 +1,94 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://vocabulary.materials-data.space/orchester> a owl:Ontology .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/Composition> a owl:Class ;
+    rdfs:label "Composition" ;
+    ns1:contributor "Manuel Enns" ;
+    ns1:description "Chemical Formula of the compound" ;
+    ns1:identifier "Composition" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/FormationEnergy> a owl:Class ;
+    rdfs:label "Formation Energy" ;
+    ns1:contributor "Matthias Büschelberger" ;
+    ns1:description "The rnergy change associated with the formation of a compound from its elemental constituents in their standard states. This class encapsulates the thermodynamic properties relevant to the formation process, including the standard formation enthalpy and Gibbs free energy of formation. The maximum energy product BHmax [kJ/m3] is determined by the hysteresis curve as the maximum of BH in the second quadrant of the curve (saturation demagnetization)." ;
+    ns1:identifier "FormationEnergy" ;
+    ns1:source "https://inside.fraunhofer.de/materialmodellierung-2/" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/HasProcessParameters> a owl:DatatypeProperty ;
+    rdfs:label "has process parameters" ;
+    ns1:identifier "HasProcessParameters" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/HighPressureOven> a owl:Class ;
+    rdfs:label "High pressure oven" ;
+    ns1:identifier "HighPressureOven" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/IntrinsicCoercivity> a owl:Class ;
+    rdfs:label "Intrinsic coercivity" ;
+    ns1:description "It is the magnetic field strength required to demagnetize the magnet (reduce magnetization to zero)." ;
+    ns1:identifier "IntrinsicCoercivity" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/MachineLearning> a owl:Class ;
+    rdfs:label "Machine Learning" ;
+    ns1:contributor "Matthias Büschelberger" ;
+    ns1:description "Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without explicit instructions. Within a subdiscipline in machine learning, advances in the field of deep learning have allowed neural networks, a class of statistical algorithms, to surpass many previous machine learning approaches in performance." ;
+    ns1:identifier "MachineLearning" ;
+    ns1:source "https://en.wikipedia.org/wiki/Machine_learning" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/MagnetProductionProcess> a owl:Class ;
+    rdfs:label "Magnet production process" ;
+    ns1:identifier "MagnetProductionProcess" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/MagneticRemanence> a owl:Class ;
+    rdfs:label "Magnetic Remanence" ;
+    ns1:contributor "Matthias Büschelberger" ;
+    ns1:description "The magnetic remanence Mr [T] describes the maximal magnetization of your sample without an applied magnetic field." ;
+    ns1:identifier "MagneticRemanence" ;
+    ns1:source "https://inside.fraunhofer.de/materialmodellierung-2/" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/MaximumEnergyProduct> a owl:Class ;
+    rdfs:label "MaximumEnergyProduct" ;
+    ns1:contributor "Manuel Enns" ;
+    ns1:description "The maximum energy product BHmax [kJ/m3] is determined by the hysteresis curve as the maximum of BH in the second quadrant of the curve (saturation demagnetization)." ;
+    ns1:identifier "MaximumEnergyProduct" ;
+    ns1:source "https://en.wikipedia.org/wiki/Maximum_energy_product" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/Performance> a owl:Class ;
+    rdfs:label "Performance" ;
+    ns1:identifier "Performance" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/RawMaterialCarbonFootprint> a owl:Class ;
+    rdfs:label "RawMaterialCarbonFootprint" ;
+    ns1:contributor "Manuel Enns" ;
+    ns1:description "kg CO2-equivalent of all raw elements added up. Data taken from LCA paper (see source)." ;
+    ns1:identifier "RawMaterialCarbonFootprint" ;
+    ns1:source "https://doi.org/10.1371/journal.pone.0101298" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/RawMaterialPrice> a owl:Class ;
+    rdfs:label "https://doi.org/10.1371/journal.pone.0101298" ;
+    ns1:contributor "Manuel Enns" ;
+    ns1:description "Price of all raw elements added up. Prices from 10/2024. This is only a rough estimate to enable a qualitative comparison and should not be seen as a current exact price estimate" ;
+    ns1:identifier "RawMaterialPrice" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/Squareness> a owl:Class ;
+    rdfs:label "Squareness" ;
+    ns1:description "Squareness describes the shape of the demagnetization curve in the second quadrant of the hysteresis loop." ;
+    ns1:identifier "Squareness" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/ThermalConditioningHeaterTemperature> a owl:Class ;
+    rdfs:label "Thermal conditioning heating temperature" ;
+    ns1:identifier "ThermalConditioningHeaterTemperature" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/Time> a owl:Class ;
+    rdfs:label "Time" ;
+    ns1:identifier "Time" .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/UniaxialAnisotropy> a owl:Class ;
+    rdfs:label "Uniaxial Anisotropy" ;
+    ns1:contributor "Matthias Büschelberger" ;
+    ns1:description "The uniaxial anisotropy field HA [T] is the maximal theoretical limit of an external magnetic field needed to reverse the magnetization of your sample. Typical real coercitivities HC [T] are below 0.2 HA." ;
+    ns1:identifier "UniaxialAnisotropy" ;
+    ns1:source "https://inside.fraunhofer.de/materialmodellierung-2/" .
+

@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/Squareness> a owl:Class ;
+    rdfs:label "Squareness" ;
+    dcterms:description "Squareness describes the shape of the demagnetization curve in the second quadrant of the hysteresis loop." ;
+    dcterms:identifier "Squareness" .
+

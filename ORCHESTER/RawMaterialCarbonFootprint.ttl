@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/RawMaterialCarbonFootprint> a owl:Class ;
+    rdfs:label "RawMaterialCarbonFootprint" ;
+    dcterms:contributor "Manuel Enns" ;
+    dcterms:description "kg CO2-equivalent of all raw elements added up. Data taken from LCA paper (see source)." ;
+    dcterms:identifier "RawMaterialCarbonFootprint" ;
+    dcterms:source "https://doi.org/10.1371/journal.pone.0101298" .
+

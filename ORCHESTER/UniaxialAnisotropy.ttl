@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/UniaxialAnisotropy> a owl:Class ;
+    rdfs:label "Uniaxial Anisotropy" ;
+    dcterms:contributor "Matthias Büschelberger" ;
+    dcterms:description "The uniaxial anisotropy field HA [T] is the maximal theoretical limit of an external magnetic field needed to reverse the magnetization of your sample. Typical real coercitivities HC [T] are below 0.2 HA." ;
+    dcterms:identifier "UniaxialAnisotropy" ;
+    dcterms:source "https://inside.fraunhofer.de/materialmodellierung-2/" .
+

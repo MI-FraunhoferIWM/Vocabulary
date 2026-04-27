@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/RawMaterialPrice> a owl:Class ;
+    rdfs:label "https://doi.org/10.1371/journal.pone.0101298" ;
+    dcterms:contributor "Manuel Enns" ;
+    dcterms:description "Price of all raw elements added up. Prices from 10/2024. This is only a rough estimate to enable a qualitative comparison and should not be seen as a current exact price estimate" ;
+    dcterms:identifier "RawMaterialPrice" .
+
