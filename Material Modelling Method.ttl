@@ -1,0 +1,66 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://vocabulary.materials-data.space/material-modelling-method> a owl:Ontology .
+
+<https://w3id.org/dsms/material-modelling-method/computational_fluid_dynamics> a owl:Class ;
+    rdfs:label "Computational Fluid Dynamics" ;
+    ns1:description "Numerical simulation of fluid flow and transport phenomena." ;
+    ns1:identifier "computational_fluid_dynamics" .
+
+<https://w3id.org/dsms/material-modelling-method/constitutive_modelling> a owl:Class ;
+    rdfs:label "Constitutive Modelling" ;
+    ns1:description "Mathematical description of material behavior under loading." ;
+    ns1:identifier "constitutive_modelling" .
+
+<https://w3id.org/dsms/material-modelling-method/crystal_plasticity> a owl:Class ;
+    rdfs:label "Crystal Plasticity" ;
+    ns1:description "Constitutive modelling approach accounting for crystallographic deformation mechanisms." ;
+    ns1:identifier "crystal_plasticity" .
+
+<https://w3id.org/dsms/material-modelling-method/density_functional_theory> a owl:Class ;
+    rdfs:label "Density Functional Theory" ;
+    ns1:description "Quantum mechanical electronic structure modelling approach." ;
+    ns1:identifier "density_functional_theory" .
+
+<https://w3id.org/dsms/material-modelling-method/discrete_element_method> a owl:Class ;
+    rdfs:label "Discrete Element Method" ;
+    ns1:description "Simulation method for granular and particulate systems." ;
+    ns1:identifier "discrete_element_method" .
+
+<https://w3id.org/dsms/material-modelling-method/finite_element_method> a owl:Class ;
+    rdfs:label "Finite Element Method" ;
+    ns1:description "Numerical method for solving continuum mechanics problems." ;
+    ns1:identifier "finite_element_method" .
+
+<https://w3id.org/dsms/material-modelling-method/fracture_mechanics_simulation> a owl:Class ;
+    rdfs:label "Fracture Mechanics Simulation" ;
+    ns1:description "Numerical modelling of crack initiation and propagation." ;
+    ns1:identifier "fracture_mechanics_simulation" .
+
+<https://w3id.org/dsms/material-modelling-method/molecular_dynamics> a owl:Class ;
+    rdfs:label "Molecular Dynamics" ;
+    ns1:description "Atomistic simulation method based on particle interactions." ;
+    ns1:identifier "molecular_dynamics" .
+
+<https://w3id.org/dsms/material-modelling-method/monte_carlo_simulation> a owl:Class ;
+    rdfs:label "Monte Carlo Simulation" ;
+    ns1:description "Statistical simulation using random sampling methods." ;
+    ns1:identifier "monte_carlo_simulation" .
+
+<https://w3id.org/dsms/material-modelling-method/multiscale_modelling> a owl:Class ;
+    rdfs:label "Multiscale Modelling" ;
+    ns1:description "Integrated modelling across multiple length or time scales." ;
+    ns1:identifier "multiscale_modelling" .
+
+<https://w3id.org/dsms/material-modelling-method/phase_field_modelling> a owl:Class ;
+    rdfs:label "Phase-Field Modelling" ;
+    ns1:description "Computational method for simulating microstructure evolution." ;
+    ns1:identifier "phase_field_modelling" .
+
+<https://w3id.org/dsms/material-modelling-method/topology_optimization> a owl:Class ;
+    rdfs:label "Topology Optimization" ;
+    ns1:description "Computational optimization of material distribution in structures." ;
+    ns1:identifier "topology_optimization" .
+

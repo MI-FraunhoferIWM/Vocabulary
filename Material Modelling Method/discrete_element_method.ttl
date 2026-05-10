@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/material-modelling-method/discrete_element_method> a owl:Class ;
+    rdfs:label "Discrete Element Method" ;
+    dcterms:description "Simulation method for granular and particulate systems." ;
+    dcterms:identifier "discrete_element_method" .
+

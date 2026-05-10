@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/material-modelling-method/topology_optimization> a owl:Class ;
+    rdfs:label "Topology Optimization" ;
+    dcterms:description "Computational optimization of material distribution in structures." ;
+    dcterms:identifier "topology_optimization" .
+
