@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/method/x_ray_diffraction> a owl:Class ;
+    rdfs:label "X-ray Diffraction" ;
+    dcterms:description "Analytical method for crystal structure characterization." ;
+    dcterms:identifier "x_ray_diffraction" .
+

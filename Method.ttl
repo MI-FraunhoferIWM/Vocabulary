@@ -1,0 +1,81 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://vocabulary.materials-data.space/method> a owl:Ontology .
+
+<https://w3id.org/dsms/method/compression_testing> a owl:Class ;
+    rdfs:label "Compression Testing" ;
+    ns1:description "Mechanical testing under compressive loading." ;
+    ns1:identifier "compression_testing" .
+
+<https://w3id.org/dsms/method/dynamic_mechanical_analysis> a owl:Class ;
+    rdfs:label "Dynamic Mechanical Analysis" ;
+    ns1:description "Method for measuring viscoelastic material behavior." ;
+    ns1:identifier "dynamic_mechanical_analysis" .
+
+<https://w3id.org/dsms/method/fatigue_testing> a owl:Class ;
+    rdfs:label "Fatigue Testing" ;
+    ns1:description "Cyclic loading method for durability characterization." ;
+    ns1:identifier "fatigue_testing" .
+
+<https://w3id.org/dsms/method/finite_element_analysis> a owl:Class ;
+    rdfs:label "Finite Element Analysis" ;
+    ns1:description "Numerical engineering analysis using discretized models." ;
+    ns1:identifier "finite_element_analysis" .
+
+<https://w3id.org/dsms/method/fracture_mechanics> a owl:Class ;
+    rdfs:label "Fracture Mechanics" ;
+    ns1:description "Study and analysis of crack initiation and propagation." ;
+    ns1:identifier "fracture_mechanics" .
+
+<https://w3id.org/dsms/method/image_analysis> a owl:Class ;
+    rdfs:label "Image Analysis" ;
+    ns1:description "Computational analysis of image-based data." ;
+    ns1:identifier "image_analysis" .
+
+<https://w3id.org/dsms/method/machine_learning> a owl:Class ;
+    rdfs:label "Machine Learning" ;
+    ns1:description "Data-driven computational modelling and prediction methods." ;
+    ns1:identifier "machine_learning" .
+
+<https://w3id.org/dsms/method/microscopy> a owl:Class ;
+    rdfs:label "Microscopy" ;
+    ns1:description "Imaging methods for microstructural characterization." ;
+    ns1:identifier "microscopy" .
+
+<https://w3id.org/dsms/method/nondestructive_testing> a owl:Class ;
+    rdfs:label "Nondestructive Testing" ;
+    ns1:description "Inspection methods that do not damage the specimen." ;
+    ns1:identifier "nondestructive_testing" .
+
+<https://w3id.org/dsms/method/rheological_characterization> a owl:Class ;
+    rdfs:label "Rheological Characterization" ;
+    ns1:description "Measurement and analysis of material flow behavior." ;
+    ns1:identifier "rheological_characterization" .
+
+<https://w3id.org/dsms/method/spectroscopy> a owl:Class ;
+    rdfs:label "Spectroscopy" ;
+    ns1:description "Analytical methods based on electromagnetic interaction." ;
+    ns1:identifier "spectroscopy" .
+
+<https://w3id.org/dsms/method/statistical_analysis> a owl:Class ;
+    rdfs:label "Statistical Analysis" ;
+    ns1:description "Quantitative analysis using statistical methods." ;
+    ns1:identifier "statistical_analysis" .
+
+<https://w3id.org/dsms/method/tensile_testing> a owl:Class ;
+    rdfs:label "Tensile Testing" ;
+    ns1:description "Experimental method for determining material behavior under tension." ;
+    ns1:identifier "tensile_testing" .
+
+<https://w3id.org/dsms/method/thermal_analysis> a owl:Class ;
+    rdfs:label "Thermal Analysis" ;
+    ns1:description "Methods for studying material response to temperature changes." ;
+    ns1:identifier "thermal_analysis" .
+
+<https://w3id.org/dsms/method/x_ray_diffraction> a owl:Class ;
+    rdfs:label "X-ray Diffraction" ;
+    ns1:description "Analytical method for crystal structure characterization." ;
+    ns1:identifier "x_ray_diffraction" .
+

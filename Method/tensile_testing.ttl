@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/method/tensile_testing> a owl:Class ;
+    rdfs:label "Tensile Testing" ;
+    dcterms:description "Experimental method for determining material behavior under tension." ;
+    dcterms:identifier "tensile_testing" .
+
