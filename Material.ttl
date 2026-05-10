@@ -1,0 +1,11 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://vocabulary.materials-data.space/material> a owl:Ontology .
+
+<https://w3id.org/dsms/material/metal> a owl:Class ;
+    rdfs:label "Metal" ;
+    ns1:description "Metallic engineering materials." ;
+    ns1:identifier "metal" .
+
