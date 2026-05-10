@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/instrument-manufacturer/anton_paar> a owl:Class ;
+    rdfs:label "Anton Paar" ;
+    dcterms:description "Manufacturer of scientific instruments including rheometers and materials characterization systems." ;
+    dcterms:identifier "anton_paar" ;
+    dcterms:source "www.anton-paar.com/" .
+

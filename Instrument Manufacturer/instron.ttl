@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/instrument-manufacturer/instron> a owl:Class ;
+    rdfs:label "Instron" ;
+    dcterms:description "Manufacturer of mechanical testing systems for tensile, compression, fatigue, impact, and materials characterization." ;
+    dcterms:identifier "instron" ;
+    dcterms:source "https://www.instron.com/" .
+

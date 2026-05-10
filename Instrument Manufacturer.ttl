@@ -1,0 +1,96 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://vocabulary.materials-data.space/instrument-manufacturer> a owl:Ontology .
+
+<https://w3id.org/dsms/instrument-manufacturer/admet> a owl:Class ;
+    rdfs:label "ADMET" ;
+    ns1:description "Manufacturer of universal testing systems and digital force/torque testing equipment." ;
+    ns1:identifier "admet" ;
+    ns1:source "https://www.admet.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/anton_paar> a owl:Class ;
+    rdfs:label "Anton Paar" ;
+    ns1:description "Manufacturer of scientific instruments including rheometers and materials characterization systems." ;
+    ns1:identifier "anton_paar" ;
+    ns1:source "www.anton-paar.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/hegewald_peschke> a owl:Class ;
+    rdfs:label "Hegewald & Peschke" ;
+    ns1:description "German supplier of materials testing machines, hardness testers, and optical measurement systems." ;
+    ns1:identifier "hegewald_peschke" ;
+    ns1:source "https://www.hegewald-peschke.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/instron> a owl:Class ;
+    rdfs:label "Instron" ;
+    ns1:description "Manufacturer of mechanical testing systems for tensile, compression, fatigue, impact, and materials characterization." ;
+    ns1:identifier "instron" ;
+    ns1:source "https://www.instron.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/lloyd_instruments> a owl:Class ;
+    rdfs:label "AMETEK Lloyd Instruments" ;
+    ns1:description "Manufacturer of materials testing machines and texture analyzers." ;
+    ns1:identifier "lloyd_instruments" ;
+    ns1:source "https://www.ametektest.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/mts_systems> a owl:Class ;
+    rdfs:label "MTS Systems" ;
+    ns1:description "Supplier of mechanical testing and simulation systems for fatigue, durability, and materials research." ;
+    ns1:identifier "mts_systems" ;
+    ns1:source "https://www.mts.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/netzsch> a owl:Class ;
+    rdfs:label "NETZSCH" ;
+    ns1:description "German manufacturer of thermal analysis and materials characterization instruments." ;
+    ns1:identifier "netzsch" ;
+    ns1:source "www.netzsch.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/qualitest> a owl:Class ;
+    rdfs:label "Qualitest" ;
+    ns1:description "Supplier of testing and inspection equipment including tensile and hardness testing systems." ;
+    ns1:identifier "qualitest" ;
+    ns1:source "https://www.worldoftest.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/shimadzu> a owl:Class ;
+    rdfs:label "Shimadzu" ;
+    ns1:description "Japanese manufacturer of analytical and materials testing instruments including universal testing machines." ;
+    ns1:identifier "shimadzu" ;
+    ns1:source "https://www.shimadzu.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/ta_instruments> a owl:Class ;
+    rdfs:label "TA Instruments" ;
+    ns1:description "Manufacturer of thermal analysis, rheology, and materials characterization instruments." ;
+    ns1:identifier "ta_instruments" ;
+    ns1:source "https://www.tainstruments.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/testresources> a owl:Class ;
+    rdfs:label "TestResources" ;
+    ns1:description "Manufacturer of electromechanical universal testing machines and custom testing systems." ;
+    ns1:identifier "testresources" ;
+    ns1:source "https://www.testresources.net/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/tinius_olsen> a owl:Class ;
+    rdfs:label "Tinius Olsen" ;
+    ns1:description "Manufacturer of tensile, compression, impact, and hardness testing equipment." ;
+    ns1:identifier "tinius_olsen" ;
+    ns1:source "https://www.tiniusolsen.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/united_testing> a owl:Class ;
+    rdfs:label "United Testing Systems" ;
+    ns1:description "Manufacturer of mechanical and materials testing equipment for industrial and laboratory use." ;
+    ns1:identifier "united_testing" ;
+    ns1:source "www.unitedtesting.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/walter_bai> a owl:Class ;
+    rdfs:label "Walter + Bai" ;
+    ns1:description "Swiss manufacturer of servo-hydraulic and electromechanical materials testing systems." ;
+    ns1:identifier "walter_bai" ;
+    ns1:source "https://www.walterbai.com/" .
+
+<https://w3id.org/dsms/instrument-manufacturer/zwick_roell> a owl:Class ;
+    rdfs:label "ZwickRoell" ;
+    ns1:description "German manufacturer of universal testing machines, tensile testing systems, hardness testers, and materials testing software." ;
+    ns1:identifier "zwick_roell" ;
+    ns1:source "www.zwickroell.com/" .
+

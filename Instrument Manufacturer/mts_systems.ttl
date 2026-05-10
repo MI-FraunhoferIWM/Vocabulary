@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/instrument-manufacturer/mts_systems> a owl:Class ;
+    rdfs:label "MTS Systems" ;
+    dcterms:description "Supplier of mechanical testing and simulation systems for fatigue, durability, and materials research." ;
+    dcterms:identifier "mts_systems" ;
+    dcterms:source "https://www.mts.com/" .
+

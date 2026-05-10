@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/instrument-manufacturer/hegewald_peschke> a owl:Class ;
+    rdfs:label "Hegewald & Peschke" ;
+    dcterms:description "German supplier of materials testing machines, hardness testers, and optical measurement systems." ;
+    dcterms:identifier "hegewald_peschke" ;
+    dcterms:source "https://www.hegewald-peschke.com/" .
+
