@@ -1,0 +1,76 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://vocabulary.materials-data.space/measurement-device> a owl:Ontology .
+
+<https://w3id.org/dsms/measurement-device/atomic_force_microscope> a owl:Class ;
+    rdfs:label "Atomic Force Microscope" ;
+    ns1:description "Scanning probe microscope for nanoscale surface characterization." ;
+    ns1:identifier "atomic_force_microscope" .
+
+<https://w3id.org/dsms/measurement-device/differential_scanning_calorimeter> a owl:Class ;
+    rdfs:label "Differential Scanning Calorimeter" ;
+    ns1:description "Thermal analysis instrument for measuring heat flow." ;
+    ns1:identifier "differential_scanning_calorimeter" .
+
+<https://w3id.org/dsms/measurement-device/hardness_tester> a owl:Class ;
+    rdfs:label "Hardness Tester" ;
+    ns1:description "Instrument for measuring material hardness." ;
+    ns1:identifier "hardness_tester" .
+
+<https://w3id.org/dsms/measurement-device/nanoindenter> a owl:Class ;
+    rdfs:label "Nanoindenter" ;
+    ns1:description "Instrument for measuring mechanical properties at small scales." ;
+    ns1:identifier "nanoindenter" .
+
+<https://w3id.org/dsms/measurement-device/optical_microscope> a owl:Class ;
+    rdfs:label "Optical Microscope" ;
+    ns1:description "Instrument for visible-light magnified imaging." ;
+    ns1:identifier "optical_microscope" .
+
+<https://w3id.org/dsms/measurement-device/profilometer> a owl:Class ;
+    rdfs:label "Profilometer" ;
+    ns1:description "Instrument for measuring surface roughness and topography." ;
+    ns1:identifier "profilometer" .
+
+<https://w3id.org/dsms/measurement-device/rheometer> a owl:Class ;
+    rdfs:label "Rheometer" ;
+    ns1:description "Instrument for measuring rheological properties of materials." ;
+    ns1:identifier "rheometer" .
+
+<https://w3id.org/dsms/measurement-device/scanning_electron_microscope> a owl:Class ;
+    rdfs:label "Scanning Electron Microscope" ;
+    ns1:description "Electron microscope for high-resolution surface imaging." ;
+    ns1:identifier "scanning_electron_microscope" .
+
+<https://w3id.org/dsms/measurement-device/spectroscopy_system> a owl:Class ;
+    rdfs:label "Spectroscopy System" ;
+    ns1:description "Instrument for spectroscopic material analysis." ;
+    ns1:identifier "spectroscopy_system" .
+
+<https://w3id.org/dsms/measurement-device/tensile_testing_machine> a owl:Class ;
+    rdfs:label "Tensile Testing Machine" ;
+    ns1:description "Device for measuring mechanical response under tensile loading." ;
+    ns1:identifier "tensile_testing_machine" .
+
+<https://w3id.org/dsms/measurement-device/thermogravimetric_analyzer> a owl:Class ;
+    rdfs:label "Thermogravimetric Analyzer" ;
+    ns1:description "Instrument for measuring mass changes during heating." ;
+    ns1:identifier "thermogravimetric_analyzer" .
+
+<https://w3id.org/dsms/measurement-device/transmission_electron_microscope> a owl:Class ;
+    rdfs:label "Transmission Electron Microscope" ;
+    ns1:description "Electron microscope for nanoscale internal structure analysis." ;
+    ns1:identifier "transmission_electron_microscope" .
+
+<https://w3id.org/dsms/measurement-device/x_ray_computed_tomography_system> a owl:Class ;
+    rdfs:label "X-ray Computed Tomography System" ;
+    ns1:description "Imaging system for nondestructive 3D internal structure analysis." ;
+    ns1:identifier "x_ray_computed_tomography_system" .
+
+<https://w3id.org/dsms/measurement-device/x_ray_diffractometer> a owl:Class ;
+    rdfs:label "X-ray Diffractometer" ;
+    ns1:description "Instrument for crystal structure and phase analysis." ;
+    ns1:identifier "x_ray_diffractometer" .
+
