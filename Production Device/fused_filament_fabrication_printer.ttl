@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/production-device/fused_filament_fabrication_printer> a owl:Class ;
+    rdfs:label "Fused Filament Fabrication Printer" ;
+    dcterms:description "Extrusion-based polymer additive manufacturing system." ;
+    dcterms:identifier "fused_filament_fabrication_printer" .
+

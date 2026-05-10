@@ -1,0 +1,66 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://vocabulary.materials-data.space/production-device> a owl:Ontology .
+
+<https://w3id.org/dsms/production-device/additive_manufacturing_system> a owl:Class ;
+    rdfs:label "Additive Manufacturing System" ;
+    ns1:description "Layer-wise manufacturing system for 3D printed components." ;
+    ns1:identifier "additive_manufacturing_system" .
+
+<https://w3id.org/dsms/production-device/cnc_lathe> a owl:Class ;
+    rdfs:label "CNC Lathe" ;
+    ns1:description "Computer-controlled turning machine for rotational parts." ;
+    ns1:identifier "cnc_lathe" .
+
+<https://w3id.org/dsms/production-device/cnc_milling_machine> a owl:Class ;
+    rdfs:label "CNC Milling Machine" ;
+    ns1:description "Computer-controlled subtractive manufacturing machine." ;
+    ns1:identifier "cnc_milling_machine" .
+
+<https://w3id.org/dsms/production-device/compression_molding_press> a owl:Class ;
+    rdfs:label "Compression Molding Press" ;
+    ns1:description "Press system for molding materials under pressure and heat." ;
+    ns1:identifier "compression_molding_press" .
+
+<https://w3id.org/dsms/production-device/extrusion_system> a owl:Class ;
+    rdfs:label "Extrusion System" ;
+    ns1:description "Device for continuous shaping of materials through a die." ;
+    ns1:identifier "extrusion_system" .
+
+<https://w3id.org/dsms/production-device/fused_filament_fabrication_printer> a owl:Class ;
+    rdfs:label "Fused Filament Fabrication Printer" ;
+    ns1:description "Extrusion-based polymer additive manufacturing system." ;
+    ns1:identifier "fused_filament_fabrication_printer" .
+
+<https://w3id.org/dsms/production-device/heat_treatment_furnace> a owl:Class ;
+    rdfs:label "Heat Treatment Furnace" ;
+    ns1:description "Furnace for thermal processing of materials." ;
+    ns1:identifier "heat_treatment_furnace" .
+
+<https://w3id.org/dsms/production-device/injection_molding_machine> a owl:Class ;
+    rdfs:label "Injection Molding Machine" ;
+    ns1:description "Manufacturing system for producing polymer parts by injection molding." ;
+    ns1:identifier "injection_molding_machine" .
+
+<https://w3id.org/dsms/production-device/laser_cutting_system> a owl:Class ;
+    rdfs:label "Laser Cutting System" ;
+    ns1:description "Manufacturing system using laser beams for cutting materials." ;
+    ns1:identifier "laser_cutting_system" .
+
+<https://w3id.org/dsms/production-device/robotic_manufacturing_cell> a owl:Class ;
+    rdfs:label "Robotic Manufacturing Cell" ;
+    ns1:description "Automated robotic system for manufacturing operations." ;
+    ns1:identifier "robotic_manufacturing_cell" .
+
+<https://w3id.org/dsms/production-device/rolling_mill> a owl:Class ;
+    rdfs:label "Rolling Mill" ;
+    ns1:description "Machine for reducing material thickness by rolling." ;
+    ns1:identifier "rolling_mill" .
+
+<https://w3id.org/dsms/production-device/selective_laser_melting_system> a owl:Class ;
+    rdfs:label "Selective Laser Melting System" ;
+    ns1:description "Powder-bed fusion additive manufacturing system for metals." ;
+    ns1:identifier "selective_laser_melting_system" .
+

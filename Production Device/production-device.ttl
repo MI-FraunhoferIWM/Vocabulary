@@ -1,0 +1,4 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://vocabulary.materials-data.space/production-device> a owl:Ontology .
+

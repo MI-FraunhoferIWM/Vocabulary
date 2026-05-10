@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/production-device/extrusion_system> a owl:Class ;
+    rdfs:label "Extrusion System" ;
+    dcterms:description "Device for continuous shaping of materials through a die." ;
+    dcterms:identifier "extrusion_system" .
+
