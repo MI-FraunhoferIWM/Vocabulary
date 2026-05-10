@@ -1,0 +1,76 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://vocabulary.materials-data.space/application-field> a owl:Ontology .
+
+<https://w3id.org/dsms/application-field/additive_manufacturing> a owl:Class ;
+    rdfs:label "Additive Manufacturing" ;
+    ns1:description "Industrial application of layer-wise manufacturing technologies." ;
+    ns1:identifier "additive_manufacturing" .
+
+<https://w3id.org/dsms/application-field/aerospace> a owl:Class ;
+    rdfs:label "Aerospace" ;
+    ns1:description "Development and manufacturing of aircraft and spacecraft systems." ;
+    ns1:identifier "aerospace" .
+
+<https://w3id.org/dsms/application-field/automotive> a owl:Class ;
+    rdfs:label "Automotive" ;
+    ns1:description "Vehicle engineering and manufacturing industry." ;
+    ns1:identifier "automotive" .
+
+<https://w3id.org/dsms/application-field/battery_technology> a owl:Class ;
+    rdfs:label "Battery Technology" ;
+    ns1:description "Development and application of electrochemical energy storage systems." ;
+    ns1:identifier "battery_technology" .
+
+<https://w3id.org/dsms/application-field/biomedical_engineering> a owl:Class ;
+    rdfs:label "Biomedical Engineering" ;
+    ns1:description "Engineering applications in medicine and healthcare." ;
+    ns1:identifier "biomedical_engineering" .
+
+<https://w3id.org/dsms/application-field/civil_engineering> a owl:Class ;
+    rdfs:label "Civil Engineering" ;
+    ns1:description "Infrastructure and construction engineering applications." ;
+    ns1:identifier "civil_engineering" .
+
+<https://w3id.org/dsms/application-field/consumer_products> a owl:Class ;
+    rdfs:label "Consumer Products" ;
+    ns1:description "Development and manufacturing of consumer goods." ;
+    ns1:identifier "consumer_products" .
+
+<https://w3id.org/dsms/application-field/energy> a owl:Class ;
+    rdfs:label "Energy" ;
+    ns1:description "Technologies related to energy generation and storage." ;
+    ns1:identifier "energy" .
+
+<https://w3id.org/dsms/application-field/medical_devices> a owl:Class ;
+    rdfs:label "Medical Devices" ;
+    ns1:description "Development and production of healthcare-related devices." ;
+    ns1:identifier "medical_devices" .
+
+<https://w3id.org/dsms/application-field/microelectronics> a owl:Class ;
+    rdfs:label "Microelectronics" ;
+    ns1:description "Miniaturized electronic systems and device engineering." ;
+    ns1:identifier "microelectronics" .
+
+<https://w3id.org/dsms/application-field/packaging> a owl:Class ;
+    rdfs:label "Packaging" ;
+    ns1:description "Materials and technologies for packaging applications." ;
+    ns1:identifier "packaging" .
+
+<https://w3id.org/dsms/application-field/robotics> a owl:Class ;
+    rdfs:label "Robotics" ;
+    ns1:description "Design and application of robotic systems." ;
+    ns1:identifier "robotics" .
+
+<https://w3id.org/dsms/application-field/semiconductor_industry> a owl:Class ;
+    rdfs:label "Semiconductor Industry" ;
+    ns1:description "Manufacturing and application of semiconductor devices." ;
+    ns1:identifier "semiconductor_industry" .
+
+<https://w3id.org/dsms/application-field/sustainability> a owl:Class ;
+    rdfs:label "Sustainability" ;
+    ns1:description "Engineering and materials solutions focused on environmental impact reduction." ;
+    ns1:identifier "sustainability" .
+
