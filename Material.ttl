@@ -4,8 +4,98 @@
 
 <https://vocabulary.materials-data.space/material> a owl:Ontology .
 
+<https://w3id.org/dsms/material/aluminum_alloy> a owl:Class ;
+    rdfs:label "Aluminum Alloy" ;
+    ns1:description "Alloy family based on aluminum." ;
+    ns1:identifier "aluminum_alloy" .
+
+<https://w3id.org/dsms/material/biomaterial> a owl:Class ;
+    rdfs:label "Biomaterial" ;
+    ns1:description "Material intended for biomedical applications." ;
+    ns1:identifier "biomaterial" .
+
+<https://w3id.org/dsms/material/carbon_fiber_reinforced_polymer> a owl:Class ;
+    rdfs:label "Carbon Fiber Reinforced Polymer" ;
+    ns1:description "Composite reinforced with carbon fibers." ;
+    ns1:identifier "carbon_fiber_reinforced_polymer" .
+
+<https://w3id.org/dsms/material/ceramic> a owl:Class ;
+    rdfs:label "Ceramic" ;
+    ns1:description "Inorganic nonmetallic material class." ;
+    ns1:identifier "ceramic" .
+
+<https://w3id.org/dsms/material/composite> a owl:Class ;
+    rdfs:label "Composite" ;
+    ns1:description "Multi-phase engineered material system." ;
+    ns1:identifier "composite" .
+
+<https://w3id.org/dsms/material/copper_alloy> a owl:Class ;
+    rdfs:label "Copper Alloy" ;
+    ns1:description "Copper-based engineering alloys." ;
+    ns1:identifier "copper_alloy" .
+
+<https://w3id.org/dsms/material/elastomer> a owl:Class ;
+    rdfs:label "Elastomer" ;
+    ns1:description "Elastic polymer material." ;
+    ns1:identifier "elastomer" .
+
+<https://w3id.org/dsms/material/fiber_reinforced_polymer> a owl:Class ;
+    rdfs:label "Fiber Reinforced Polymer" ;
+    ns1:description "Polymer matrix reinforced with fibers." ;
+    ns1:identifier "fiber_reinforced_polymer" .
+
+<https://w3id.org/dsms/material/glass_ceramic> a owl:Class ;
+    rdfs:label "Glass Ceramic" ;
+    ns1:description "Partially crystalline glass-based ceramic." ;
+    ns1:identifier "glass_ceramic" .
+
 <https://w3id.org/dsms/material/metal> a owl:Class ;
     rdfs:label "Metal" ;
     ns1:description "Metallic engineering materials." ;
     ns1:identifier "metal" .
+
+<https://w3id.org/dsms/material/nickel_superalloy> a owl:Class ;
+    rdfs:label "Nickel Superalloy" ;
+    ns1:description "High-temperature nickel-based alloys." ;
+    ns1:identifier "nickel_superalloy" .
+
+<https://w3id.org/dsms/material/polymer> a owl:Class ;
+    rdfs:label "Polymer" ;
+    ns1:description "Macromolecular materials." ;
+    ns1:identifier "polymer" .
+
+<https://w3id.org/dsms/material/semiconductor> a owl:Class ;
+    rdfs:label "Semiconductor" ;
+    ns1:description "Materials with tunable electrical conductivity." ;
+    ns1:identifier "semiconductor" .
+
+<https://w3id.org/dsms/material/stainless_steel> a owl:Class ;
+    rdfs:label "Stainless Steel" ;
+    ns1:description "Corrosion-resistant steel alloy family." ;
+    ns1:identifier "stainless_steel" .
+
+<https://w3id.org/dsms/material/steel> a owl:Class ;
+    rdfs:label "Steel" ;
+    ns1:description "Iron-carbon engineering alloy family." ;
+    ns1:identifier "steel" .
+
+<https://w3id.org/dsms/material/thermoplastic> a owl:Class ;
+    rdfs:label "Thermoplastic" ;
+    ns1:description "Polymer that softens when heated." ;
+    ns1:identifier "thermoplastic" .
+
+<https://w3id.org/dsms/material/thermoset> a owl:Class ;
+    rdfs:label "Thermoset" ;
+    ns1:description "Crosslinked polymer material." ;
+    ns1:identifier "thermoset" .
+
+<https://w3id.org/dsms/material/titanium_alloy> a owl:Class ;
+    rdfs:label "Titanium Alloy" ;
+    ns1:description "High-strength lightweight metallic alloys." ;
+    ns1:identifier "titanium_alloy" .
+
+<https://w3id.org/dsms/material/tool_steel> a owl:Class ;
+    rdfs:label "Tool Steel" ;
+    ns1:description "Steel optimized for hardness and wear resistance." ;
+    ns1:identifier "tool_steel" .
 

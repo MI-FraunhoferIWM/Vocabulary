@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/material/tool_steel> a owl:Class ;
+    rdfs:label "Tool Steel" ;
+    dcterms:description "Steel optimized for hardness and wear resistance." ;
+    dcterms:identifier "tool_steel" .
+

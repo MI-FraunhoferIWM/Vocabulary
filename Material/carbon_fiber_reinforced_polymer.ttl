@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/material/carbon_fiber_reinforced_polymer> a owl:Class ;
+    rdfs:label "Carbon Fiber Reinforced Polymer" ;
+    dcterms:description "Composite reinforced with carbon fibers." ;
+    dcterms:identifier "carbon_fiber_reinforced_polymer" .
+
