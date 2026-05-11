@@ -1,0 +1,498 @@
+# =============================================================================
+# EBSD Data Ontology
+# Defines classes and properties for representing Electron Backscatter
+# Diffraction (EBSD) experimental data using semantic web technologies.
+#
+# Reuses: EMMO, PROV-O, SOSA/SSN, QUDT, OWL, RDFS
+# =============================================================================
+
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ebsd:  <http://emmc.info/ebsd-ontology#> .
+@prefix emmo:  <https://w3id.org/emmo#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+@prefix qudt:  <http://qudt.org/schema/qudt/> .
+@prefix unit:  <http://qudt.org/vocab/unit/> .
+@prefix schema: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# =============================================================================
+# Ontology Declaration
+# =============================================================================
+
+<http://emmc.info/ebsd-ontology>
+    a owl:Ontology ;
+    rdfs:label "EBSD Data Ontology"@en ;
+    rdfs:comment "Ontology for representing Electron Backscatter Diffraction (EBSD) experimental data, metadata, and microstructural relationships using semantic web technologies."@en ;
+    dcterms:description "Covers EBSD experiments, samples, crystal phases, grain microstructure, grain boundaries, crystallographic orientations, and instrument provenance."@en ;
+    owl:versionInfo "1.0.0" ;
+    dcterms:created "2024-01-01"^^xsd:date .
+
+# =============================================================================
+# Classes
+# =============================================================================
+
+# --- Experiment & Process ---
+
+ebsd:EBSDExperiment a owl:Class ;
+    rdfs:label "EBSD Experiment"@en ;
+    rdfs:comment "A complete EBSD experimental session: instrument setup, acquisition, and processing."@en ;
+    rdfs:subClassOf prov:Activity .
+
+ebsd:EBSDScan a owl:Class ;
+    rdfs:label "EBSD Scan"@en ;
+    rdfs:comment "A single area scan: defined step size, accelerating voltage, and scan dimensions."@en ;
+    rdfs:subClassOf sosa:Observation .
+
+ebsd:ProcessingPipeline a owl:Class ;
+    rdfs:label "Processing Pipeline"@en ;
+    rdfs:comment "Software workflow applied to raw Kikuchi patterns: indexing, cleanup, grain segmentation."@en ;
+    rdfs:subClassOf prov:Activity .
+
+ebsd:SamplePreparation a owl:Class ;
+    rdfs:label "Sample Preparation"@en ;
+    rdfs:comment "Surface preparation steps applied before EBSD acquisition (grinding, polishing, etching)."@en .
+
+ebsd:HeatTreatment a owl:Class ;
+    rdfs:label "Heat Treatment"@en ;
+    rdfs:comment "Thermal processing applied to the sample prior to characterisation."@en .
+
+# --- Instruments ---
+
+ebsd:ScanningElectronMicroscope a owl:Class ;
+    rdfs:label "Scanning Electron Microscope"@en ;
+    rdfs:comment "The SEM platform used for EBSD data collection."@en ;
+    rdfs:subClassOf sosa:Sensor .
+
+ebsd:EBSDDetector a owl:Class ;
+    rdfs:label "EBSD Detector"@en ;
+    rdfs:comment "The phosphor screen / CMOS detector that captures Kikuchi diffraction patterns."@en ;
+    rdfs:subClassOf sosa:Sensor .
+
+# --- Sample & Material ---
+
+ebsd:Sample a owl:Class ;
+    rdfs:label "Sample"@en ;
+    rdfs:comment "The physical specimen under investigation."@en ;
+    rdfs:subClassOf sosa:FeatureOfInterest .
+
+ebsd:Material a owl:Class ;
+    rdfs:label "Material"@en ;
+    rdfs:comment "Bulk material identity and nominal composition."@en .
+
+# --- Crystallography ---
+
+ebsd:CrystalPhase a owl:Class ;
+    rdfs:label "Crystal Phase"@en ;
+    rdfs:comment "A crystallographic phase identified during pattern indexing (e.g. austenite, ferrite)."@en .
+
+ebsd:Grain a owl:Class ;
+    rdfs:label "Grain"@en ;
+    rdfs:comment "A crystallographically coherent region identified through orientation-based segmentation."@en .
+
+ebsd:GrainBoundary a owl:Class ;
+    rdfs:label "Grain Boundary"@en ;
+    rdfs:comment "The interface between two adjacent grains, characterised by misorientation angle and axis."@en .
+
+ebsd:CrystalOrientation a owl:Class ;
+    rdfs:label "Crystal Orientation"@en ;
+    rdfs:comment "Mean crystallographic orientation of a grain expressed as Bunge Euler angles (φ1, Φ, φ2)."@en .
+
+# --- Boundary Type Vocabulary (individuals) ---
+
+ebsd:LowAngleBoundary a owl:NamedIndividual ;
+    rdfs:label "Low-Angle Grain Boundary"@en ;
+    rdfs:comment "Misorientation < 15°. Composed of dislocation arrays."@en .
+
+ebsd:HighAngleBoundary a owl:NamedIndividual ;
+    rdfs:label "High-Angle Grain Boundary"@en ;
+    rdfs:comment "Misorientation ≥ 15°. Disordered atomic structure."@en .
+
+ebsd:TwinBoundary a owl:NamedIndividual ;
+    rdfs:label "Twin Boundary (Σ3)"@en ;
+    rdfs:comment "Coherent twin: ~60° misorientation about <111> in FCC. Special coincidence site lattice boundary."@en .
+
+ebsd:PhaseBoundary a owl:NamedIndividual ;
+    rdfs:label "Phase Boundary"@en ;
+    rdfs:comment "Interface between two grains of different crystal phases."@en .
+
+# =============================================================================
+# Object Properties
+# =============================================================================
+
+ebsd:hasScan a owl:ObjectProperty ;
+    rdfs:label "has scan"@en ;
+    rdfs:domain ebsd:EBSDExperiment ;
+    rdfs:range ebsd:EBSDScan .
+
+ebsd:performedOn a owl:ObjectProperty ;
+    rdfs:label "performed on"@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range ebsd:Sample .
+
+ebsd:hasMaterial a owl:ObjectProperty ;
+    rdfs:label "has material"@en ;
+    rdfs:domain ebsd:Sample ;
+    rdfs:range ebsd:Material .
+
+ebsd:hasHeatTreatment a owl:ObjectProperty ;
+    rdfs:label "has heat treatment"@en ;
+    rdfs:domain ebsd:Sample ;
+    rdfs:range ebsd:HeatTreatment .
+
+ebsd:hasSamplePreparation a owl:ObjectProperty ;
+    rdfs:label "has sample preparation"@en ;
+    rdfs:domain ebsd:Sample ;
+    rdfs:range ebsd:SamplePreparation .
+
+ebsd:usesMicroscope a owl:ObjectProperty ;
+    rdfs:label "uses microscope"@en ;
+    rdfs:domain ebsd:EBSDExperiment ;
+    rdfs:range ebsd:ScanningElectronMicroscope .
+
+ebsd:usesDetector a owl:ObjectProperty ;
+    rdfs:label "uses detector"@en ;
+    rdfs:domain ebsd:EBSDExperiment ;
+    rdfs:range ebsd:EBSDDetector .
+
+ebsd:hasProcessingPipeline a owl:ObjectProperty ;
+    rdfs:label "has processing pipeline"@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range ebsd:ProcessingPipeline .
+
+ebsd:hasPhase a owl:ObjectProperty ;
+    rdfs:label "has phase"@en ;
+    rdfs:comment "Associates a grain (or scan) with its crystal phase."@en ;
+    rdfs:domain [ owl:unionOf (ebsd:Grain ebsd:EBSDScan) ] ;
+    rdfs:range ebsd:CrystalPhase .
+
+ebsd:containsGrain a owl:ObjectProperty ;
+    rdfs:label "contains grain"@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range ebsd:Grain .
+
+ebsd:hasOrientation a owl:ObjectProperty ;
+    rdfs:label "has orientation"@en ;
+    rdfs:comment "Mean crystallographic orientation of a grain."@en ;
+    rdfs:domain ebsd:Grain ;
+    rdfs:range ebsd:CrystalOrientation .
+
+ebsd:hasGrainBoundary a owl:ObjectProperty ;
+    rdfs:label "has grain boundary"@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range ebsd:GrainBoundary .
+
+ebsd:connects a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label "connects"@en ;
+    rdfs:comment "Relates a grain boundary to the two grains it separates. Symmetric."@en ;
+    rdfs:domain ebsd:GrainBoundary ;
+    rdfs:range ebsd:Grain .
+
+ebsd:isBoundaryType a owl:ObjectProperty ;
+    rdfs:label "is boundary type"@en ;
+    rdfs:comment "Classifies boundary as LAGB, HAGB, twin, or phase boundary."@en ;
+    rdfs:domain ebsd:GrainBoundary .
+
+ebsd:rawDataFile a owl:ObjectProperty ;
+    rdfs:label "raw data file"@en ;
+    rdfs:comment "URI pointing to the external HDF5/CTF file containing per-pixel scan data."@en ;
+    rdfs:domain ebsd:EBSDScan .
+
+# =============================================================================
+# Datatype Properties — Scan Parameters
+# =============================================================================
+
+ebsd:stepSize a owl:DatatypeProperty ;
+    rdfs:label "step size (µm)"@en ;
+    rdfs:comment "Distance between adjacent measurement points in micrometres."@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range xsd:decimal .
+
+ebsd:acceleratingVoltage a owl:DatatypeProperty ;
+    rdfs:label "accelerating voltage (kV)"@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range xsd:decimal .
+
+ebsd:workingDistance a owl:DatatypeProperty ;
+    rdfs:label "working distance (mm)"@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range xsd:decimal .
+
+ebsd:tiltAngle a owl:DatatypeProperty ;
+    rdfs:label "tilt angle (°)"@en ;
+    rdfs:comment "Sample surface tilt toward the EBSD detector, typically 70°."@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range xsd:decimal .
+
+ebsd:scanWidth a owl:DatatypeProperty ;
+    rdfs:label "scan width (µm)"@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range xsd:decimal .
+
+ebsd:scanHeight a owl:DatatypeProperty ;
+    rdfs:label "scan height (µm)"@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range xsd:decimal .
+
+ebsd:totalPoints a owl:DatatypeProperty ;
+    rdfs:label "total scan points"@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range xsd:integer .
+
+ebsd:indexedFraction a owl:DatatypeProperty ;
+    rdfs:label "indexed fraction"@en ;
+    rdfs:comment "Fraction of scan points successfully pattern-indexed (0–1)."@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range xsd:decimal .
+
+ebsd:acquisitionDate a owl:DatatypeProperty ;
+    rdfs:label "acquisition date"@en ;
+    rdfs:domain ebsd:EBSDScan ;
+    rdfs:range xsd:date .
+
+# =============================================================================
+# Datatype Properties — Grain
+# =============================================================================
+
+ebsd:grainArea a owl:DatatypeProperty ;
+    rdfs:label "grain area (µm²)"@en ;
+    rdfs:domain ebsd:Grain ;
+    rdfs:range xsd:decimal .
+
+ebsd:equivalentCircleDiameter a owl:DatatypeProperty ;
+    rdfs:label "equivalent circle diameter (µm)"@en ;
+    rdfs:comment "Diameter of a circle with the same area as the grain."@en ;
+    rdfs:domain ebsd:Grain ;
+    rdfs:range xsd:decimal .
+
+ebsd:aspectRatio a owl:DatatypeProperty ;
+    rdfs:label "aspect ratio"@en ;
+    rdfs:comment "Ratio of major axis to minor axis of best-fit ellipse."@en ;
+    rdfs:domain ebsd:Grain ;
+    rdfs:range xsd:decimal .
+
+ebsd:meanConfidenceIndex a owl:DatatypeProperty ;
+    rdfs:label "mean confidence index"@en ;
+    rdfs:comment "Mean OIM confidence index across all grain pixels (0–1)."@en ;
+    rdfs:domain ebsd:Grain ;
+    rdfs:range xsd:decimal .
+
+ebsd:meanImageQuality a owl:DatatypeProperty ;
+    rdfs:label "mean image quality"@en ;
+    rdfs:comment "Mean Kikuchi pattern image quality (band contrast proxy)."@en ;
+    rdfs:domain ebsd:Grain ;
+    rdfs:range xsd:decimal .
+
+ebsd:numberOfPoints a owl:DatatypeProperty ;
+    rdfs:label "number of points"@en ;
+    rdfs:comment "Number of scan pixels contained within this grain."@en ;
+    rdfs:domain ebsd:Grain ;
+    rdfs:range xsd:integer .
+
+ebsd:grainID a owl:DatatypeProperty ;
+    rdfs:label "grain ID"@en ;
+    rdfs:comment "Integer grain identifier assigned during segmentation."@en ;
+    rdfs:domain ebsd:Grain ;
+    rdfs:range xsd:integer .
+
+# =============================================================================
+# Datatype Properties — Crystal Orientation (Bunge Euler Angles)
+# =============================================================================
+
+ebsd:phi1 a owl:DatatypeProperty ;
+    rdfs:label "φ1 (°)"@en ;
+    rdfs:comment "First Bunge Euler angle φ1 in degrees [0, 360)."@en ;
+    rdfs:domain ebsd:CrystalOrientation ;
+    rdfs:range xsd:decimal .
+
+ebsd:Phi a owl:DatatypeProperty ;
+    rdfs:label "Φ (°)"@en ;
+    rdfs:comment "Second Bunge Euler angle Φ in degrees [0, 90]."@en ;
+    rdfs:domain ebsd:CrystalOrientation ;
+    rdfs:range xsd:decimal .
+
+ebsd:phi2 a owl:DatatypeProperty ;
+    rdfs:label "φ2 (°)"@en ;
+    rdfs:comment "Third Bunge Euler angle φ2 in degrees [0, 360)."@en ;
+    rdfs:domain ebsd:CrystalOrientation ;
+    rdfs:range xsd:decimal .
+
+# =============================================================================
+# Datatype Properties — Grain Boundary
+# =============================================================================
+
+ebsd:misorientationAngle a owl:DatatypeProperty ;
+    rdfs:label "misorientation angle (°)"@en ;
+    rdfs:comment "Disorientation angle between adjacent grains in degrees."@en ;
+    rdfs:domain ebsd:GrainBoundary ;
+    rdfs:range xsd:decimal .
+
+ebsd:misorientationAxis_h a owl:DatatypeProperty ;
+    rdfs:label "misorientation axis h"@en ;
+    rdfs:comment "h index of rotation axis [uvw] in crystal frame."@en ;
+    rdfs:domain ebsd:GrainBoundary ;
+    rdfs:range xsd:integer .
+
+ebsd:misorientationAxis_k a owl:DatatypeProperty ;
+    rdfs:label "misorientation axis k"@en ;
+    rdfs:domain ebsd:GrainBoundary ;
+    rdfs:range xsd:integer .
+
+ebsd:misorientationAxis_l a owl:DatatypeProperty ;
+    rdfs:label "misorientation axis l"@en ;
+    rdfs:domain ebsd:GrainBoundary ;
+    rdfs:range xsd:integer .
+
+ebsd:boundaryLength a owl:DatatypeProperty ;
+    rdfs:label "boundary length (µm)"@en ;
+    rdfs:comment "Trace length of the grain boundary segment in the 2D section plane."@en ;
+    rdfs:domain ebsd:GrainBoundary ;
+    rdfs:range xsd:decimal .
+
+ebsd:boundaryID a owl:DatatypeProperty ;
+    rdfs:label "boundary ID"@en ;
+    rdfs:domain ebsd:GrainBoundary ;
+    rdfs:range xsd:integer .
+
+# =============================================================================
+# Datatype Properties — Crystal Phase
+# =============================================================================
+
+ebsd:crystalSystem a owl:DatatypeProperty ;
+    rdfs:label "crystal system"@en ;
+    rdfs:comment "e.g. cubic, hexagonal, orthorhombic"@en ;
+    rdfs:domain ebsd:CrystalPhase ;
+    rdfs:range xsd:string .
+
+ebsd:spaceGroup a owl:DatatypeProperty ;
+    rdfs:label "space group symbol"@en ;
+    rdfs:comment "Hermann-Mauguin symbol e.g. Fm-3m."@en ;
+    rdfs:domain ebsd:CrystalPhase ;
+    rdfs:range xsd:string .
+
+ebsd:spaceGroupNumber a owl:DatatypeProperty ;
+    rdfs:label "space group number"@en ;
+    rdfs:comment "International Tables number (1–230)."@en ;
+    rdfs:domain ebsd:CrystalPhase ;
+    rdfs:range xsd:integer .
+
+ebsd:latticeParameter_a a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter a (Å)"@en ;
+    rdfs:domain ebsd:CrystalPhase ;
+    rdfs:range xsd:decimal .
+
+ebsd:latticeParameter_b a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter b (Å)"@en ;
+    rdfs:domain ebsd:CrystalPhase ;
+    rdfs:range xsd:decimal .
+
+ebsd:latticeParameter_c a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter c (Å)"@en ;
+    rdfs:domain ebsd:CrystalPhase ;
+    rdfs:range xsd:decimal .
+
+ebsd:phaseFraction a owl:DatatypeProperty ;
+    rdfs:label "phase fraction"@en ;
+    rdfs:comment "Area fraction of this phase across the full scan (0–1)."@en ;
+    rdfs:domain ebsd:CrystalPhase ;
+    rdfs:range xsd:decimal .
+
+# =============================================================================
+# Datatype Properties — Material
+# =============================================================================
+
+ebsd:materialName a owl:DatatypeProperty ;
+    rdfs:label "material name"@en ;
+    rdfs:domain ebsd:Material ;
+    rdfs:range xsd:string .
+
+ebsd:materialDesignation a owl:DatatypeProperty ;
+    rdfs:label "material designation"@en ;
+    rdfs:comment "Standard alloy designation e.g. UNS S31600, EN 1.4401."@en ;
+    rdfs:domain ebsd:Material ;
+    rdfs:range xsd:string .
+
+ebsd:nominalComposition a owl:DatatypeProperty ;
+    rdfs:label "nominal composition"@en ;
+    rdfs:domain ebsd:Material ;
+    rdfs:range xsd:string .
+
+# =============================================================================
+# Datatype Properties — Instrument
+# =============================================================================
+
+ebsd:manufacturer a owl:DatatypeProperty ;
+    rdfs:label "manufacturer"@en ;
+    rdfs:domain [ owl:unionOf (ebsd:ScanningElectronMicroscope ebsd:EBSDDetector) ] ;
+    rdfs:range xsd:string .
+
+ebsd:instrumentModel a owl:DatatypeProperty ;
+    rdfs:label "instrument model"@en ;
+    rdfs:domain [ owl:unionOf (ebsd:ScanningElectronMicroscope ebsd:EBSDDetector) ] ;
+    rdfs:range xsd:string .
+
+ebsd:serialNumber a owl:DatatypeProperty ;
+    rdfs:label "serial number"@en ;
+    rdfs:domain [ owl:unionOf (ebsd:ScanningElectronMicroscope ebsd:EBSDDetector) ] ;
+    rdfs:range xsd:string .
+
+# =============================================================================
+# Datatype Properties — Processing Pipeline
+# =============================================================================
+
+ebsd:softwareName a owl:DatatypeProperty ;
+    rdfs:label "software name"@en ;
+    rdfs:domain ebsd:ProcessingPipeline ;
+    rdfs:range xsd:string .
+
+ebsd:softwareVersion a owl:DatatypeProperty ;
+    rdfs:label "software version"@en ;
+    rdfs:domain ebsd:ProcessingPipeline ;
+    rdfs:range xsd:string .
+
+ebsd:cleanupMethod a owl:DatatypeProperty ;
+    rdfs:label "cleanup method"@en ;
+    rdfs:comment "e.g. grain dilation, neighbour confidence index correlation."@en ;
+    rdfs:domain ebsd:ProcessingPipeline ;
+    rdfs:range xsd:string .
+
+ebsd:minimumGrainSize a owl:DatatypeProperty ;
+    rdfs:label "minimum grain size (pixels)"@en ;
+    rdfs:comment "Grains below this pixel threshold are merged with neighbours."@en ;
+    rdfs:domain ebsd:ProcessingPipeline ;
+    rdfs:range xsd:integer .
+
+ebsd:confidenceIndexThreshold a owl:DatatypeProperty ;
+    rdfs:label "confidence index threshold"@en ;
+    rdfs:comment "Pixels below this CI are excluded from indexing statistics."@en ;
+    rdfs:domain ebsd:ProcessingPipeline ;
+    rdfs:range xsd:decimal .
+
+# =============================================================================
+# Datatype Properties — Heat Treatment
+# =============================================================================
+
+ebsd:annealingTemperature a owl:DatatypeProperty ;
+    rdfs:label "annealing temperature (°C)"@en ;
+    rdfs:domain ebsd:HeatTreatment ;
+    rdfs:range xsd:decimal .
+
+ebsd:annealingDuration a owl:DatatypeProperty ;
+    rdfs:label "annealing duration (min)"@en ;
+    rdfs:domain ebsd:HeatTreatment ;
+    rdfs:range xsd:decimal .
+
+ebsd:coolingMedium a owl:DatatypeProperty ;
+    rdfs:label "cooling medium"@en ;
+    rdfs:comment "e.g. water quench, air cool, furnace cool."@en ;
+    rdfs:domain ebsd:HeatTreatment ;
+    rdfs:range xsd:string .
+
+ebsd:atmosphere a owl:DatatypeProperty ;
+    rdfs:label "atmosphere"@en ;
+    rdfs:comment "Furnace atmosphere during heat treatment e.g. argon, vacuum."@en ;
+    rdfs:domain ebsd:HeatTreatment ;
+    rdfs:range xsd:string .
