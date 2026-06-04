@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/orchester/MaterialCard> a owl:Class ;
+    rdfs:label "Material Card" ;
+    dcterms:description "A structured set of material parameters serving as input for material simulations, such as FEM tools. Combines mechanical characterisation results, chemical composition, and material identity into a parameterised record that can be consumed directly by simulation software." ;
+    dcterms:identifier "MaterialCard" ;
+    dcterms:source "Manuel" ;
+    rdfs:comment "A material card is not the material itself but a simulation-ready data artifact derived from one or more characterisation processes. Distinct from a general material data sheet in that it is specifically formatted as input for computational models." .
+

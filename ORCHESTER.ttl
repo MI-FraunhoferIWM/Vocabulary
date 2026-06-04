@@ -11,6 +11,13 @@
     ns1:source "Manual" ;
     rdfs:comment "Distinct from the generic Person class in that an Expert is associated with specific domain knowledge, operational competences, and professional affiliations. Typical roles include principal investigator, process operator, materials specialist, and measurement device operator." .
 
+<https://w3id.org/dsms/orchester/MaterialCard> a owl:Class ;
+    rdfs:label "Material Card" ;
+    ns1:description "A structured set of material parameters serving as input for material simulations, such as FEM tools. Combines mechanical characterisation results, chemical composition, and material identity into a parameterised record that can be consumed directly by simulation software." ;
+    ns1:identifier "MaterialCard" ;
+    ns1:source "Manuel" ;
+    rdfs:comment "A material card is not the material itself but a simulation-ready data artifact derived from one or more characterisation processes. Distinct from a general material data sheet in that it is specifically formatted as input for computational models." .
+
 <https://w3id.org/dsms/orchester/magnet-predictor/Composition> a owl:Class ;
     rdfs:label "Composition" ;
     ns1:contributor "Manuel Enns" ;
