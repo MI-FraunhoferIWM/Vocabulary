@@ -4,6 +4,13 @@
 
 <https://vocabulary.materials-data.space/orchester> a owl:Ontology .
 
+<https://w3id.org/dsms/orchester/Expert> a owl:Class ;
+    rdfs:label "Expert" ;
+    ns1:description "A person with domain expertise in a scientific or engineering discipline, such as a researcher, engineer, or technician, who can act as an operator of processes or as a subject-matter expert for materials and measurement devices." ;
+    ns1:identifier "Expert" ;
+    ns1:source "Manual" ;
+    rdfs:comment "Distinct from the generic Person class in that an Expert is associated with specific domain knowledge, operational competences, and professional affiliations. Typical roles include principal investigator, process operator, materials specialist, and measurement device operator." .
+
 <https://w3id.org/dsms/orchester/magnet-predictor/Composition> a owl:Class ;
     rdfs:label "Composition" ;
     ns1:contributor "Manuel Enns" ;
