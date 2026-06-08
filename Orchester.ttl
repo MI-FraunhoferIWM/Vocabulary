@@ -10,8 +10,8 @@
     ns1:identifier "OrchesterBaseTerm1" .
 
 <https://w3id.org/dsms/orchester/Test1> a owl:Class ;
-    rdfs:label "Test1" ;
-    ns1:description "dwfdwfd" ;
+    rdfs:label "Test1 updated" ;
+    ns1:description "Test1 updated" ;
     ns1:identifier "Test1" .
 
 <https://w3id.org/dsms/orchester/magnet-predictor/Composition> a owl:Class ;
