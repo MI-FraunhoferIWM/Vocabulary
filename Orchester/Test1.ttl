@@ -4,11 +4,14 @@
 
 <https://w3id.org/dsms/orchester/Test1> a owl:Class ;
     rdfs:label "Test1 updated" ;
-    dcterms:description "Test1 updated" ;
+    dcterms:description "Test1 updated123" ;
     dcterms:identifier "Test1" ;
     rdfs:comment "fefefe" ;
     rdfs:subClassOf <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#Cobalt>,
+        <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#FlatTensileTestSpecimen>,
         <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#YoungsModulus> ;
-    owl:equivalentClass <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#Thermocouples>,
+    owl:equivalentClass <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#ArtificialAgingTemperature>,
+        <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#CrackPath>,
+        <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#Thermocouples>,
         <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#YoungsModulus> .
 
