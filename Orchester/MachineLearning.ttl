@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/MachineLearning> a owl:Class ;
+    rdfs:label "Machine Learning" ;
+    dcterms:contributor "Matthias Büschelberger" ;
+    dcterms:description "Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without explicit instructions. Within a subdiscipline in machine learning, advances in the field of deep learning have allowed neural networks, a class of statistical algorithms, to surpass many previous machine learning approaches in performance." ;
+    dcterms:identifier "MachineLearning" ;
+    dcterms:source "https://en.wikipedia.org/wiki/Machine_learning" .
+

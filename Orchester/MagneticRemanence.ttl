@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/MagneticRemanence> a owl:Class ;
+    rdfs:label "Magnetic Remanence" ;
+    dcterms:contributor "Matthias Büschelberger" ;
+    dcterms:description "The magnetic remanence Mr [T] describes the maximal magnetization of your sample without an applied magnetic field." ;
+    dcterms:identifier "MagneticRemanence" ;
+    dcterms:source "https://inside.fraunhofer.de/materialmodellierung-2/" .
+

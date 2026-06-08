@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/orchester/magnet-predictor/FormationEnergy> a owl:Class ;
+    rdfs:label "Formation Energy" ;
+    dcterms:contributor "Matthias Büschelberger" ;
+    dcterms:description "The rnergy change associated with the formation of a compound from its elemental constituents in their standard states. This class encapsulates the thermodynamic properties relevant to the formation process, including the standard formation enthalpy and Gibbs free energy of formation. The maximum energy product BHmax [kJ/m3] is determined by the hysteresis curve as the maximum of BH in the second quadrant of the curve (saturation demagnetization)." ;
+    dcterms:identifier "FormationEnergy" ;
+    dcterms:source "https://inside.fraunhofer.de/materialmodellierung-2/" .
+
