@@ -12,7 +12,12 @@
 <https://w3id.org/dsms/orchester/Test1> a owl:Class ;
     rdfs:label "Test1 updated" ;
     ns1:description "Test1 updated" ;
-    ns1:identifier "Test1" .
+    ns1:identifier "Test1" ;
+    rdfs:comment "fefefe" ;
+    rdfs:subClassOf <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#Cobalt>,
+        <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#YoungsModulus> ;
+    owl:equivalentClass <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#Thermocouples>,
+        <https://www.iwm.fraunhofer.de/ontologies/bwmd-ontology#YoungsModulus> .
 
 <https://w3id.org/dsms/orchester/magnet-predictor/Composition> a owl:Class ;
     rdfs:label "Composition" ;
