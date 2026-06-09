@@ -7,5 +7,6 @@
     dcterms:contributor "Manuel Enns" ;
     dcterms:description "The maximum energy product BHmax [kJ/m3] is determined by the hysteresis curve as the maximum of BH in the second quadrant of the curve (saturation demagnetization)." ;
     dcterms:identifier "MaximumEnergyProduct" ;
-    dcterms:source "https://en.wikipedia.org/wiki/Maximum_energy_product" .
+    dcterms:source "https://en.wikipedia.org/wiki/Maximum_energy_product" ;
+    rdfs:subClassOf dcterms:contributor .
 

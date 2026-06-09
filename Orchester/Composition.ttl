@@ -6,5 +6,9 @@
     rdfs:label "Composition" ;
     dcterms:contributor "Manuel Enns" ;
     dcterms:description "Chemical Formula of the compound1" ;
-    dcterms:identifier "Composition" .
+    dcterms:identifier "Composition" ;
+    rdfs:subClassOf dcterms:MethodOfInstruction,
+        dcterms:Point ;
+    owl:equivalentClass dcterms:contributor,
+        dcterms:issued .
 
