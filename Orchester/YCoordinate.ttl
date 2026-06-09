@@ -2,7 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/dsms/orchester/YCoordinate> a owl:Class ;
+<https://w3id.org/dsms/orchester/magnet-predictor/YCoordinate> a owl:Class ;
     rdfs:label "Y Coordinate" ;
     dcterms:contributor "Lukas Morand" ;
     dcterms:description "Vertical position of the measurement point in the scan grid, typically measured in micrometers from the origin" ;

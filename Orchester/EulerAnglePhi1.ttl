@@ -2,7 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/dsms/orchester/EulerAnglePhi1> a owl:Class ;
+<https://w3id.org/dsms/orchester/magnet-predictor/EulerAnglePhi1> a owl:Class ;
     rdfs:label "Euler Angle phi1" ;
     dcterms:contributor "Lukas Morand" ;
     dcterms:description "First Euler angle (φ₁) in Bunge convention, representing rotation about the Z-axis (range: 0-360°)" ;

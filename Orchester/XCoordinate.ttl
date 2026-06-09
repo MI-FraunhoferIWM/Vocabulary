@@ -2,7 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/dsms/orchester/XCoordinate> a owl:Class ;
+<https://w3id.org/dsms/orchester/magnet-predictor/XCoordinate> a owl:Class ;
     rdfs:label "X Coordinate" ;
     dcterms:contributor "Lukas Morand" ;
     dcterms:description "Horizontal position of the measurement point in the scan grid, typically measured in micrometers from the origin" ;

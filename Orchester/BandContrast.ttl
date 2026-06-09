@@ -2,7 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/dsms/orchester/BandContrast> a owl:Class ;
+<https://w3id.org/dsms/orchester/magnet-predictor/BandContrast> a owl:Class ;
     rdfs:label "Band Contrast" ;
     dcterms:contributor "Lukas Morand" ;
     dcterms:description "Measure of sharpness and intensity contrast of Kikuchi bands in the diffraction pattern; higher values indicate better pattern quality" ;
