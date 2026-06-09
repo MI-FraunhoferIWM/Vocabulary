@@ -41,8 +41,7 @@
     ns1:identifier "EBSDMeasurement" .
 
 <https://w3id.org/dsms/orchester/EulerAnglePhi> rdfs:label "Euler Angle Phi" ;
-    ns1:description "Second Euler angle (Φ) in Bunge convention, representing rotation about the X'-axis (range: 0-180°)" ;
-    ns1:identifier "EulerAnglePhi" .
+    ns1:description "Second Euler angle (Φ) in Bunge convention, representing rotation about the X'-axis (range: 0-180°)" .
 
 <https://w3id.org/dsms/orchester/EulerAnglePhi1> a owl:Class ;
     rdfs:label "Euler Angle phi1" ;
