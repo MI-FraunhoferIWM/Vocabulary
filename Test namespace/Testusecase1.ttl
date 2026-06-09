@@ -1,0 +1,17 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/test-namespace/usecase1/Testusecase1> a owl:Class ;
+    rdfs:label "Test usecase1" ;
+    dcterms:contributor "fge4wt4t" ;
+    dcterms:description "Test description1" ;
+    dcterms:identifier "Testusecase1" ;
+    dcterms:source "efgwefg4ew" ;
+    rdfs:comment "wqfqw" ;
+    rdfs:subClassOf rdf:Alt,
+        rdf:Statement ;
+    owl:equivalentClass rdf:Bag,
+        rdf:Seq .
+
