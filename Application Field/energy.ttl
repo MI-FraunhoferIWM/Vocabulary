@@ -4,6 +4,6 @@
 
 <https://w3id.org/dsms/application-field/energy> a owl:Class ;
     rdfs:label "Energy" ;
-    dcterms:description "Technologies related to energy generation and bstorage." ;
+    dcterms:description "Technologies related to energy generation and storage." ;
     dcterms:identifier "energy" .
 

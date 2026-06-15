@@ -41,7 +41,7 @@
 
 <https://w3id.org/dsms/application-field/energy> a owl:Class ;
     rdfs:label "Energy" ;
-    ns1:description "Technologies related to energy generation and bstorage." ;
+    ns1:description "Technologies related to energy generation and storage." ;
     ns1:identifier "energy" .
 
 <https://w3id.org/dsms/application-field/medical_devices> a owl:Class ;
