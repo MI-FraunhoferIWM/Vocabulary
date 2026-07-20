@@ -1,0 +1,534 @@
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix schema:  <https://schema.org/> .
+@prefix emmo:    <https://w3id.org/emmo#> .
+@prefix moda:    <https://w3id.org/moda#> .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Ontology declaration
+# ─────────────────────────────────────────────────────────────────────────────
+
+<https://w3id.org/moda>
+    a owl:Ontology ;
+    dcterms:title        "MODA Ontology"@en ;
+    dcterms:description  "Ontology for Materials MOdelling DAta (MODA) based on CWA 17284:2018 (E). Provides classes and properties for documenting physics-based materials simulations in the DSMS knowledge graph."@en ;
+    dcterms:creator      "Fraunhofer IWM / DSMS Team" ;
+    dcterms:license      <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:references   <https://www.cen.eu/work/areas/ict/ebusiness/Pages/WS-MODA.aspx> ;
+    owl:versionIRI       <https://w3id.org/moda/0.1> ;
+    owl:versionInfo      "0.1" .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Classes
+# ─────────────────────────────────────────────────────────────────────────────
+
+moda:Simulation
+    a owl:Class ;
+    rdfs:label   "Simulation"@en ;
+    rdfs:comment "A complete set of activities to arrive at a calculated answer to a specific question (CWA 17284:2018 §3.17). One MODA document corresponds to one Simulation instance."@en ;
+    rdfs:subClassOf prov:Activity .
+
+moda:UserCase
+    a owl:Class ;
+    rdfs:label   "User Case"@en ;
+    rdfs:comment "The specific question or problem being simulated, described independently of any modelling approach (CWA 17284:2018 §3.17 implied; CWA Table 4)."@en .
+
+moda:PhysicsBasedModel
+    a owl:Class ;
+    rdfs:label   "Physics-Based Model"@en ;
+    rdfs:comment "A solvable set of one physics equation and one or more materials relations (CWA 17284:2018 §3.5). Classified by the entity type whose behaviour it describes."@en .
+
+moda:ElectronicModel
+    a owl:Class ;
+    rdfs:label      "Electronic Model"@en ;
+    rdfs:comment    "Physics-based model describing the behaviour of electron entities (CWA §3.7.1)."@en ;
+    rdfs:subClassOf moda:PhysicsBasedModel .
+
+moda:AtomisticModel
+    a owl:Class ;
+    rdfs:label      "Atomistic Model"@en ;
+    rdfs:comment    "Physics-based model describing the behaviour of atom entities (CWA §3.7.2)."@en ;
+    rdfs:subClassOf moda:PhysicsBasedModel .
+
+moda:MesoscopicModel
+    a owl:Class ;
+    rdfs:label      "Mesoscopic Model"@en ;
+    rdfs:comment    "Physics-based model describing the behaviour of mesoscopic entities (CWA §3.7.3)."@en ;
+    rdfs:subClassOf moda:PhysicsBasedModel .
+
+moda:ContinuumModel
+    a owl:Class ;
+    rdfs:label      "Continuum Model"@en ;
+    rdfs:comment    "Physics-based model describing the behaviour of continuum volume entities (CWA §3.7.4)."@en ;
+    rdfs:subClassOf moda:PhysicsBasedModel .
+
+moda:PhysicsEquation
+    a owl:Class ;
+    rdfs:label   "Physics Equation"@en ;
+    rdfs:comment "A mathematical equation based on fundamental physics theory, generic and independent of the specific material (CWA §3.3). Contains variables (solved for) and parameters (supplied by materials relations)."@en .
+
+moda:MaterialsRelation
+    a owl:Class ;
+    rdfs:label   "Materials Relation"@en ;
+    rdfs:comment "A materials-specific equation providing values for parameters in the physics equation (CWA §3.4). Valid only for the class of materials for which it was formulated."@en .
+
+moda:Hamiltonian
+    a owl:Class ;
+    rdfs:label      "Hamiltonian"@en ;
+    rdfs:comment    "Materials relation used in electronic models (CWA §3.4 example)."@en ;
+    rdfs:subClassOf moda:MaterialsRelation .
+
+moda:ForceField
+    a owl:Class ;
+    rdfs:label      "Force Field"@en ;
+    rdfs:comment    "Materials relation used in atomistic models (CWA §3.4 example)."@en ;
+    rdfs:subClassOf moda:MaterialsRelation .
+
+moda:InteractionPotential
+    a owl:Class ;
+    rdfs:label      "Mesoscopic Interaction Potential"@en ;
+    rdfs:comment    "Materials relation used in mesoscopic models (CWA §3.4 example)."@en ;
+    rdfs:subClassOf moda:MaterialsRelation .
+
+moda:ConstitutiveEquation
+    a owl:Class ;
+    rdfs:label      "Constitutive Equation"@en ;
+    rdfs:comment    "Materials relation used in continuum models (CWA §3.4 example)."@en ;
+    rdfs:subClassOf moda:MaterialsRelation .
+
+moda:Solver
+    a owl:Class ;
+    rdfs:label   "Solver"@en ;
+    rdfs:comment "A set of techniques used to numerically solve a physics-based model (CWA §3.10). Strictly separated from the model concept."@en .
+
+moda:MonteCarloSolver
+    a owl:Class ;
+    rdfs:label      "Monte Carlo Solver"@en ;
+    rdfs:subClassOf moda:Solver .
+
+moda:MolecularDynamicsSolver
+    a owl:Class ;
+    rdfs:label      "Molecular Dynamics Solver"@en ;
+    rdfs:subClassOf moda:Solver .
+
+moda:FiniteElementSolver
+    a owl:Class ;
+    rdfs:label      "Finite Element Solver"@en ;
+    rdfs:subClassOf moda:Solver .
+
+moda:DFTSolver
+    a owl:Class ;
+    rdfs:label      "DFT Solver"@en ;
+    rdfs:subClassOf moda:Solver .
+
+moda:SPHSolver
+    a owl:Class ;
+    rdfs:label      "Smoothed Particle Hydrodynamics Solver"@en ;
+    rdfs:subClassOf moda:Solver .
+
+moda:CGMDSolver
+    a owl:Class ;
+    rdfs:label      "Coarse-Grained MD Solver"@en ;
+    rdfs:subClassOf moda:Solver .
+
+moda:PostProcessing
+    a owl:Class ;
+    rdfs:label   "Post-Processing"@en ;
+    rdfs:comment "Operations on the raw output of a solver that do not alter the physical system state (CWA §3.12). Produces the processed output (light green circle in MODA workflow)."@en ;
+    rdfs:subClassOf prov:Activity .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Object Properties
+# ─────────────────────────────────────────────────────────────────────────────
+
+moda:hasUserCase
+    a owl:ObjectProperty ;
+    rdfs:label   "has user case"@en ;
+    rdfs:domain  moda:Simulation ;
+    rdfs:range   moda:UserCase ;
+    rdfs:comment "Links a simulation to the user case description it addresses."@en .
+
+moda:isUserCaseOf
+    a owl:ObjectProperty ;
+    rdfs:label      "is user case of"@en ;
+    owl:inverseOf   moda:hasUserCase .
+
+moda:hasModel
+    a owl:ObjectProperty ;
+    rdfs:label   "has model"@en ;
+    rdfs:domain  moda:Simulation ;
+    rdfs:range   moda:PhysicsBasedModel ;
+    rdfs:comment "Links a simulation to one physics-based model in its chain."@en .
+
+moda:isModelOf
+    a owl:ObjectProperty ;
+    rdfs:label      "is model of"@en ;
+    owl:inverseOf   moda:hasModel .
+
+moda:hasPhysicsEquation
+    a owl:ObjectProperty ;
+    rdfs:label   "has physics equation"@en ;
+    rdfs:domain  moda:PhysicsBasedModel ;
+    rdfs:range   moda:PhysicsEquation ;
+    rdfs:comment "Links a physics-based model to its governing physics equation."@en .
+
+moda:isPhysicsEquationOf
+    a owl:ObjectProperty ;
+    rdfs:label      "is physics equation of"@en ;
+    owl:inverseOf   moda:hasPhysicsEquation .
+
+moda:hasMaterialsRelation
+    a owl:ObjectProperty ;
+    rdfs:label   "has materials relation"@en ;
+    rdfs:domain  moda:PhysicsBasedModel ;
+    rdfs:range   moda:MaterialsRelation ;
+    rdfs:comment "Links a physics-based model to one of its materials relations."@en .
+
+moda:isMaterialsRelationOf
+    a owl:ObjectProperty ;
+    rdfs:label      "is materials relation of"@en ;
+    owl:inverseOf   moda:hasMaterialsRelation .
+
+moda:complementsPhysicsEquation
+    a owl:ObjectProperty ;
+    rdfs:label   "complements physics equation"@en ;
+    rdfs:domain  moda:MaterialsRelation ;
+    rdfs:range   moda:PhysicsEquation ;
+    rdfs:comment "Indicates which physics equation this materials relation provides parameter values for."@en .
+
+moda:hasSolver
+    a owl:ObjectProperty ;
+    rdfs:label   "has solver"@en ;
+    rdfs:domain  moda:PhysicsBasedModel ;
+    rdfs:range   moda:Solver ;
+    rdfs:comment "Links a physics-based model to the numerical solver used to solve it."@en .
+
+moda:isSolverOf
+    a owl:ObjectProperty ;
+    rdfs:label      "is solver of"@en ;
+    owl:inverseOf   moda:hasSolver .
+
+moda:hasPostProcessing
+    a owl:ObjectProperty ;
+    rdfs:label   "has post-processing"@en ;
+    rdfs:domain  moda:PhysicsBasedModel ;
+    rdfs:range   moda:PostProcessing ;
+    rdfs:comment "Links a physics-based model to its post-processing step."@en .
+
+moda:isPostProcessingOf
+    a owl:ObjectProperty ;
+    rdfs:label      "is post-processing of"@en ;
+    owl:inverseOf   moda:hasPostProcessing .
+
+moda:addressesUserCase
+    a owl:ObjectProperty ;
+    rdfs:label   "addresses user case"@en ;
+    rdfs:domain  moda:PhysicsBasedModel ;
+    rdfs:range   moda:UserCase ;
+    rdfs:comment "Indicates which user case aspect this model addresses in the simulation chain."@en .
+
+moda:simulatedInputFrom
+    a owl:ObjectProperty ;
+    rdfs:label          "simulated input from"@en ;
+    rdfs:domain         moda:PhysicsEquation ;
+    rdfs:range          moda:PostProcessing ;
+    rdfs:comment        "Links a physics equation's simulated input (§2.5) to the post-processing step of the preceding model that produced it."@en ;
+    rdfs:subPropertyOf  prov:wasDerivedFrom .
+
+moda:hasOutputFile
+    a owl:ObjectProperty ;
+    rdfs:label   "has output file"@en ;
+    rdfs:domain  moda:PostProcessing ;
+    rdfs:comment "Links a post-processing step to a file attachment containing output data."@en .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Datatype Properties — moda:Simulation (KType: moda)
+# ─────────────────────────────────────────────────────────────────────────────
+
+moda:projectAcronym
+    a owl:DatatypeProperty ;
+    rdfs:label   "project acronym"@en ;
+    rdfs:domain  moda:Simulation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Short acronym of the project this simulation belongs to (CWA MODA Heading)."@en .
+
+moda:userCaseDescription
+    a owl:DatatypeProperty ;
+    rdfs:label   "user case description"@en ;
+    rdfs:domain  moda:Simulation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "One-sentence description of the user case. No modelling information allowed (CWA Table 2, Row 1)."@en .
+
+moda:workflowType
+    a owl:DatatypeProperty ;
+    rdfs:label   "workflow type"@en ;
+    rdfs:domain  moda:Simulation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Topology of the simulation workflow: standalone | linking | iterative_coupling | tight_coupling (CWA Table 3)."@en .
+
+moda:workflowRationale
+    a owl:DatatypeProperty ;
+    rdfs:label   "workflow rationale"@en ;
+    rdfs:domain  moda:Simulation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Textual rationale for the chosen model chain and workflow instead of other possible approaches (CWA Table 2, Row 5)."@en .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Datatype Properties — moda:UserCase (KType: moda-user-case)
+# ─────────────────────────────────────────────────────────────────────────────
+
+moda:aspectDescription
+    a owl:DatatypeProperty ;
+    rdfs:label   "aspect description"@en ;
+    rdfs:domain  moda:UserCase ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Textual description of the user case aspect simulated by this model. No modelling information (CWA Table 4, §1.1)."@en .
+
+moda:materialDescription
+    a owl:DatatypeProperty ;
+    rdfs:label   "material description"@en ;
+    rdfs:domain  moda:UserCase ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Physical and/or chemical description of the material to be modelled (CWA Table 4, §1.2)."@en .
+
+moda:geometry
+    a owl:DatatypeProperty ;
+    rdfs:label   "geometry"@en ;
+    rdfs:domain  moda:UserCase ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Geometry of the physical system: size, form, drawing. Not the computational domain (CWA Table 4, §1.3)."@en .
+
+moda:timeLapse
+    a owl:DatatypeProperty ;
+    rdfs:label   "time lapse"@en ;
+    rdfs:domain  moda:UserCase ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Physical duration of the situation to be simulated. Not the computational wall-clock time or time step (CWA Table 4, §1.4)."@en .
+
+moda:processConditions
+    a owl:DatatypeProperty ;
+    rdfs:label   "process conditions"@en ;
+    rdfs:domain  moda:UserCase ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Manufacturing or in-service conditions: heated walls, external pressures, bending forces (CWA Table 4, §1.5)."@en .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Datatype Properties — moda:PhysicsBasedModel (KType: moda-model)
+# ─────────────────────────────────────────────────────────────────────────────
+
+moda:modelName
+    a owl:DatatypeProperty ;
+    rdfs:label   "model name"@en ;
+    rdfs:domain  moda:PhysicsBasedModel ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Name as it appears in the RoMM content list (CWA Table 5, §2.1)."@en .
+
+moda:modelType
+    a owl:DatatypeProperty ;
+    rdfs:label   "model type"@en ;
+    rdfs:domain  moda:PhysicsBasedModel ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Classification: electronic | atomistic | mesoscopic | continuum (CWA §3.7)."@en .
+
+moda:entityType
+    a owl:DatatypeProperty ;
+    rdfs:label   "entity type"@en ;
+    rdfs:domain  moda:PhysicsBasedModel ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Simulated entity type: electron entity | atom entity | mesoscopic entity | continuum volume entity (CWA Table 5, §2.2)."@en .
+
+moda:chainPosition
+    a owl:DatatypeProperty ;
+    rdfs:label   "chain position"@en ;
+    rdfs:domain  moda:PhysicsBasedModel ;
+    rdfs:range   xsd:integer ;
+    rdfs:comment "Ordering index of this model in the simulation chain (1 = first model)."@en .
+
+moda:couplingType
+    a owl:DatatypeProperty ;
+    rdfs:label   "coupling type"@en ;
+    rdfs:domain  moda:PhysicsBasedModel ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "How this model connects to the previous one: standalone | linked | iterative_coupling | tight_coupling (CWA §3.13-3.16)."@en .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Datatype Properties — moda:PhysicsEquation (KType: moda-physics-equation)
+# ─────────────────────────────────────────────────────────────────────────────
+
+moda:equationName
+    a owl:DatatypeProperty ;
+    rdfs:label   "equation name"@en ;
+    rdfs:domain  moda:PhysicsEquation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Standard name of the physics equation, e.g. 'Newton\\'s equations of motion' (CWA Table 5, §2.3)."@en .
+
+moda:mathematicalForm
+    a owl:DatatypeProperty ;
+    rdfs:label   "mathematical form"@en ;
+    rdfs:domain  moda:PhysicsEquation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "LaTeX or plain-text representation of the equation (CWA Table 5, §2.3)."@en .
+
+moda:hasVariableQuantity
+    a owl:DatatypeProperty ;
+    rdfs:label   "has variable quantity"@en ;
+    rdfs:domain  moda:PhysicsEquation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Physics quantities the equation solves for (variables). These form the raw output (CWA Table 5, §2.3)."@en .
+
+moda:hasParameterQuantity
+    a owl:DatatypeProperty ;
+    rdfs:label   "has parameter quantity"@en ;
+    rdfs:domain  moda:PhysicsEquation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Physics quantities not solved for (parameters). Each requires a materials relation to provide a value (CWA Table 5, §2.3)."@en .
+
+moda:rawOutputDescription
+    a owl:DatatypeProperty ;
+    rdfs:label   "raw output description"@en ;
+    rdfs:domain  moda:PhysicsEquation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Description of the raw solver output: values of the variable quantities calculated by solving the PE (dark green box in MODA workflow) (CWA Table 5, §2.3)."@en .
+
+moda:simulatedInputDescription
+    a owl:DatatypeProperty ;
+    rdfs:label   "simulated input description"@en ;
+    rdfs:domain  moda:PhysicsEquation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Textual description of processed output from a preceding model used as input here. Empty for stand-alone simulations (CWA Table 5, §2.5)."@en .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Datatype Properties — moda:MaterialsRelation (KType: moda-materials-relation)
+# ─────────────────────────────────────────────────────────────────────────────
+
+moda:relationName
+    a owl:DatatypeProperty ;
+    rdfs:label   "relation name"@en ;
+    rdfs:domain  moda:MaterialsRelation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Canonical name, e.g. 'Lennard-Jones 12-6 potential' (CWA Table 5, §2.4)."@en .
+
+moda:relationType
+    a owl:DatatypeProperty ;
+    rdfs:label   "relation type"@en ;
+    rdfs:domain  moda:MaterialsRelation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Category: Hamiltonian | force_field | interaction_potential | constitutive_equation | other (CWA §3.4 examples)."@en .
+
+moda:hasPhysicsQuantity
+    a owl:DatatypeProperty ;
+    rdfs:label   "has physics quantity"@en ;
+    rdfs:domain  moda:MaterialsRelation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Parameters and variables appearing in this materials relation (CWA Table 5, §2.4)."@en .
+
+moda:validForMaterialClass
+    a owl:DatatypeProperty ;
+    rdfs:label   "valid for material class"@en ;
+    rdfs:domain  moda:MaterialsRelation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Class of materials for which this relation is valid. Specificity distinguishes MR from PE (CWA §3.4, Note 5)."@en .
+
+moda:functionalForm
+    a owl:DatatypeProperty ;
+    rdfs:label   "functional form"@en ;
+    rdfs:domain  moda:MaterialsRelation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Mathematical form of the relation or a literature reference."@en .
+
+moda:providesParameter
+    a owl:DatatypeProperty ;
+    rdfs:label   "provides parameter"@en ;
+    rdfs:domain  moda:MaterialsRelation ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Name of the physics equation parameter this materials relation supplies a value for (CWA §3.4)."@en .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Datatype Properties — moda:Solver (KType: moda-solver)
+# ─────────────────────────────────────────────────────────────────────────────
+
+moda:solverName
+    a owl:DatatypeProperty ;
+    rdfs:label   "solver name"@en ;
+    rdfs:domain  moda:Solver ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Name of the solver technique, e.g. 'Verlet integrator', 'multi-grid' (CWA Table 6, §3.1)."@en .
+
+moda:solverType
+    a owl:DatatypeProperty ;
+    rdfs:label   "solver type"@en ;
+    rdfs:domain  moda:Solver ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Solver category: Monte Carlo | Molecular Dynamics | FEM | DFT | SPH | multi-grid | adaptive | other (CWA Table 6, §3.1)."@en .
+
+moda:numericalTimeStep
+    a owl:DatatypeProperty ;
+    rdfs:label   "numerical time step"@en ;
+    rdfs:domain  moda:Solver ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Numerical integration time step used by the solver. Distinct from the physical time lapse (CWA Table 6, §3.3)."@en .
+
+moda:computationalDomain
+    a owl:DatatypeProperty ;
+    rdfs:label   "computational domain"@en ;
+    rdfs:domain  moda:Solver ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "How the physics equation, materials relation, and material are represented computationally (CWA Table 6, §3.4)."@en .
+
+moda:boundaryConditions
+    a owl:DatatypeProperty ;
+    rdfs:label   "boundary conditions"@en ;
+    rdfs:domain  moda:Solver ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Computational translation of physical boundary conditions, e.g. periodic BC to simulate infinite domain (CWA Table 6, §3.5)."@en .
+
+moda:additionalSolverParameters
+    a owl:DatatypeProperty ;
+    rdfs:label   "additional solver parameters"@en ;
+    rdfs:domain  moda:Solver ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Internal numerical solver details: tolerances, convergence criteria, integrator options, under-relaxation parameters (CWA Table 6, §3.6)."@en .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Datatype Properties — moda:PostProcessing (KType: moda-post-processing)
+# ─────────────────────────────────────────────────────────────────────────────
+
+moda:processedOutput
+    a owl:DatatypeProperty ;
+    rdfs:label   "processed output"@en ;
+    rdfs:domain  moda:PostProcessing ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Specification of the post-processing output (light green circle in MODA workflow diagram) (CWA Table 7, §4.1)."@en .
+
+moda:targetEntityType
+    a owl:DatatypeProperty ;
+    rdfs:label   "target entity type"@en ;
+    rdfs:domain  moda:PostProcessing ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Entity type expected by the next model in the chain: electron | atom | mesoscopic | continuum (CWA Table 7, §4.1)."@en .
+
+moda:postProcessingMethodology
+    a owl:DatatypeProperty ;
+    rdfs:label   "post-processing methodology"@en ;
+    rdfs:domain  moda:PostProcessing ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Mathematics and/or physics used in post-processing, e.g. volume averaging for homogenisation (CWA Table 7, §4.2)."@en .
+
+moda:marginOfError
+    a owl:DatatypeProperty ;
+    rdfs:label   "margin of error"@en ;
+    rdfs:domain  moda:PostProcessing ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Accuracy in % of the property calculated, with explanation for an industrial end-user (CWA Table 7, §4.3)."@en .
+
+moda:outputType
+    a owl:DatatypeProperty ;
+    rdfs:label   "output type"@en ;
+    rdfs:domain  moda:PostProcessing ;
+    rdfs:range   xsd:string ;
+    rdfs:comment "Type of output produced: calculated_values | materials_relation | visualization (CWA §3.12)."@en .
