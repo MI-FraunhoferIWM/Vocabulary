@@ -4,6 +4,11 @@
 
 <https://vocabulary.materials-data.space/aid4greenest> a owl:Ontology .
 
+<https://w3id.org/dsms/aid4greenest/gleeble/OperationalVelocity> a owl:Class ;
+    rdfs:label "Operational velocity" ;
+    ns1:identifier "OperationalVelocity" ;
+    rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> .
+
 <https://w3id.org/dsms/aid4greenest/gleeble/Term1> a owl:Class ;
     rdfs:label "Term1" ;
     ns1:description "Term 1 description" ;
