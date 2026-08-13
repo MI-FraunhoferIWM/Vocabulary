@@ -1,0 +1,11 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://vocabulary.materials-data.space/aid4greenest> a owl:Ontology .
+
+<https://w3id.org/dsms/aid4greenest/gleeble/Term1> a owl:Class ;
+    rdfs:label "Term1" ;
+    ns1:description "Term 1 description" ;
+    ns1:identifier "Term1" .
+
