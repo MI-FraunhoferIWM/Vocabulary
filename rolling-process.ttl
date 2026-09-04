@@ -229,7 +229,7 @@
 
 # ── Custom units ──────────────────────────────────────────────────────────────
 
-:unit/HRC a owl:NamedIndividual ;
+<https://w3id.org/dsms/rolling-process/unit/HRC> a owl:NamedIndividual ;
     rdfs:label "Rockwell C hardness"@en ;
     rdfs:comment "Hardness unit on the Rockwell C scale (HRC). Used for work roll surface hardness."@en .
 
