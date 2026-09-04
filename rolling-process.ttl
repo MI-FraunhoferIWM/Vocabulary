@@ -1,0 +1,248 @@
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix obi:   <http://purl.obolibrary.org/obo/OBI_> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix pmd:   <https://w3id.org/pmd/co/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix :      <https://w3id.org/dsms/rolling-process/> .
+@base          <https://w3id.org/dsms/rolling-process/> .
+
+# ── Ontology metadata ─────────────────────────────────────────────────────────
+
+<https://w3id.org/dsms/rolling-process/> a owl:Ontology ;
+    rdfs:label "Rolling Process Ontology"@en ;
+    dct:created "2026-09-04"^^xsd:date ;
+    dct:description "Controlled vocabulary for flat metal rolling processes, covering multi-pass rolling experiments, individual rolling passes, and work roll tooling. Aligned to PMDco ManufacturingProcess (PMD_0000029) and OBI Device (OBI_0000968)."@en ;
+    owl:versionInfo "0.1.0" .
+
+# ── Classes ───────────────────────────────────────────────────────────────────
+
+:RollingExperiment a owl:Class ;
+    rdfs:subClassOf pmd:PMD_0000029 ;   # ManufacturingProcess
+    rdfs:label "rolling experiment"@en ;
+    rdfs:comment "A multi-pass flat rolling experiment on a metal strip, identified by a series ID, alloy designation, and specification ID. Contains an ordered sequence of rolling passes."@en .
+
+:RollingPass a owl:Class ;
+    rdfs:subClassOf pmd:PMD_0000029 ;   # ManufacturingProcess
+    rdfs:label "rolling pass"@en ;
+    rdfs:comment "A single pass of the metal strip through the work rolls. Records target process parameters, measured quality values, and in-process sensor data."@en .
+
+:WorkRoll a owl:Class ;
+    rdfs:subClassOf obi:0000968 ;       # Device
+    rdfs:label "work roll"@en ;
+    rdfs:comment "A cylindrical tool in a rolling mill that applies compressive force to reduce strip thickness. Characterised by diameter, hardness, surface roughness, and crown profile. Upper and lower rolls are modelled as separate instances."@en .
+
+# ── Object properties ─────────────────────────────────────────────────────────
+
+:hasPass a owl:ObjectProperty ;
+    rdfs:label "has pass"@en ;
+    rdfs:comment "Links a rolling experiment to one of its constituent rolling passes."@en ;
+    rdfs:domain :RollingExperiment ;
+    rdfs:range  :RollingPass .
+
+:usesUpperWorkRoll a owl:ObjectProperty ;
+    rdfs:label "uses upper work roll"@en ;
+    rdfs:comment "Links a rolling pass to the upper work roll used during that pass."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  :WorkRoll .
+
+:usesLowerWorkRoll a owl:ObjectProperty ;
+    rdfs:label "uses lower work roll"@en ;
+    rdfs:comment "Links a rolling pass to the lower work roll used during that pass."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  :WorkRoll .
+
+# ── RollingExperiment properties ──────────────────────────────────────────────
+
+:hasSeriesId a owl:DatatypeProperty ;
+    rdfs:label "series ID"@en ;
+    rdfs:comment "Identifier of the experimental series to which this rolling experiment belongs."@en ;
+    rdfs:domain :RollingExperiment ;
+    rdfs:range  xsd:string .
+
+:hasAlloy a owl:DatatypeProperty ;
+    rdfs:label "alloy"@en ;
+    rdfs:comment "Alloy designation of the metal strip being rolled, e.g. B14."@en ;
+    rdfs:domain :RollingExperiment ;
+    rdfs:range  xsd:string .
+
+:hasSpecificationId a owl:DatatypeProperty ;
+    rdfs:label "specification ID"@en ;
+    rdfs:comment "Identifier of the rolling schedule specification that defines target parameters for this experiment."@en ;
+    rdfs:domain :RollingExperiment ;
+    rdfs:range  xsd:string .
+
+# ── RollingPass – identity ─────────────────────────────────────────────────────
+
+:hasPassNumber a owl:DatatypeProperty ;
+    rdfs:label "pass number"@en ;
+    rdfs:comment "Sequential index of this pass within the rolling experiment (1-based)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:integer .
+
+:hasStartTime a owl:DatatypeProperty ;
+    rdfs:label "start time"@en ;
+    rdfs:comment "Timestamp at which this rolling pass began."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:dateTime .
+
+:hasEndTime a owl:DatatypeProperty ;
+    rdfs:label "end time"@en ;
+    rdfs:comment "Timestamp at which this rolling pass ended."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:dateTime .
+
+# ── RollingPass – target process parameters (para) ───────────────────────────
+
+:hasTargetEntryThickness a owl:DatatypeProperty ;
+    rdfs:label "target entry thickness"@en ;
+    rdfs:comment "Target strip thickness at entry to the roll gap (H0) in micrometres (µm)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasTargetExitThickness a owl:DatatypeProperty ;
+    rdfs:label "target exit thickness"@en ;
+    rdfs:comment "Target strip thickness at exit from the roll gap (H1) in micrometres (µm)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasTargetHeightReduction a owl:DatatypeProperty ;
+    rdfs:label "target height reduction"@en ;
+    rdfs:comment "Target thickness reduction per pass (eh) expressed as a percentage (%)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasTargetLogarithmicStrain a owl:DatatypeProperty ;
+    rdfs:label "target logarithmic strain"@en ;
+    rdfs:comment "Target true (logarithmic) thickness strain per pass (phi = ln(H0/H1)), dimensionless."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+# ── RollingPass – measured quality (quality) ──────────────────────────────────
+
+:hasMeasuredEntryThickness a owl:DatatypeProperty ;
+    rdfs:label "measured entry thickness"@en ;
+    rdfs:comment "Measured strip thickness at roll-gap entry (H0_X) in millimetres (mm)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasMeasuredExitThickness a owl:DatatypeProperty ;
+    rdfs:label "measured exit thickness"@en ;
+    rdfs:comment "Measured strip thickness at roll-gap exit (H1_X) in millimetres (mm)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasMeasuredWidth a owl:DatatypeProperty ;
+    rdfs:label "measured width"@en ;
+    rdfs:comment "Measured strip width after the pass (B_X) in millimetres (mm). Increases slightly each pass due to lateral spread."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+# ── RollingPass – in-process sensor data (data) ───────────────────────────────
+
+:hasRollingForce a owl:DatatypeProperty ;
+    rdfs:label "rolling force"@en ;
+    rdfs:comment "Mean rolling force in the vertical direction (F_roll_Z) measured during the pass, in kilonewtons (kN)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasRollingForceVariation a owl:DatatypeProperty ;
+    rdfs:label "rolling force variation"@en ;
+    rdfs:comment "Standard deviation or peak-to-peak variation of the rolling force (dF_roll_Z) during the pass, in kilonewtons (kN)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasRollSpeed a owl:DatatypeProperty ;
+    rdfs:label "roll speed"@en ;
+    rdfs:comment "Peripheral speed of the work rolls (v_roll_Z) in metres per second (m/s)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasUpperMotorCurrent a owl:DatatypeProperty ;
+    rdfs:label "upper motor current"@en ;
+    rdfs:comment "Mean current drawn by the upper roll drive motor (I_engine_up_Z) during the pass, in amperes (A)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasLowerMotorCurrent a owl:DatatypeProperty ;
+    rdfs:label "lower motor current"@en ;
+    rdfs:comment "Mean current drawn by the lower roll drive motor (I_engine_down_Z) during the pass, in amperes (A)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasAnalysisTime a owl:DatatypeProperty ;
+    rdfs:label "analysis time"@en ;
+    rdfs:comment "Duration of the data-acquisition window for this pass (dt_analyse) in seconds (s)."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+:hasPassDirection a owl:DatatypeProperty ;
+    rdfs:label "pass direction"@en ;
+    rdfs:comment "Sign convention for the strip travel direction during this pass (ds): +1 forward, -1 reverse."@en ;
+    rdfs:domain :RollingPass ;
+    rdfs:range  xsd:decimal .
+
+# ── WorkRoll properties ───────────────────────────────────────────────────────
+
+:hasPosition a owl:DatatypeProperty ;
+    rdfs:label "position"@en ;
+    rdfs:comment "Vertical position of this work roll in the mill stand: 'upper' or 'lower'."@en ;
+    rdfs:domain :WorkRoll ;
+    rdfs:range  xsd:string .
+
+:hasDiameter a owl:DatatypeProperty ;
+    rdfs:label "diameter"@en ;
+    rdfs:comment "Nominal diameter of the work roll (D_WR) in millimetres (mm)."@en ;
+    rdfs:domain :WorkRoll ;
+    rdfs:range  xsd:decimal .
+
+:hasHardness a owl:DatatypeProperty ;
+    rdfs:label "hardness"@en ;
+    rdfs:comment "Surface hardness of the work roll in Rockwell C (HRC)."@en ;
+    rdfs:domain :WorkRoll ;
+    rdfs:range  xsd:decimal .
+
+:hasSurfaceRoughnessMin a owl:DatatypeProperty ;
+    rdfs:label "surface roughness (min)"@en ;
+    rdfs:comment "Minimum mean roughness depth Rz of the roll surface in micrometres (µm)."@en ;
+    rdfs:domain :WorkRoll ;
+    rdfs:range  xsd:decimal .
+
+:hasSurfaceRoughnessMax a owl:DatatypeProperty ;
+    rdfs:label "surface roughness (max)"@en ;
+    rdfs:comment "Maximum mean roughness depth Rz of the roll surface in micrometres (µm)."@en ;
+    rdfs:domain :WorkRoll ;
+    rdfs:range  xsd:decimal .
+
+:hasCrown a owl:DatatypeProperty ;
+    rdfs:label "crown"@en ;
+    rdfs:comment "Roll crown (barrel profile height dh_crown_WR): difference between centreline and edge diameter in millimetres (mm). Zero indicates a cylindrical (flat) roll profile."@en ;
+    rdfs:domain :WorkRoll ;
+    rdfs:range  xsd:decimal .
+
+:hasDataset a owl:ObjectProperty ;
+    rdfs:label "has dataset"@en ;
+    rdfs:comment "Links a rolling experiment to the raw dataset KItem containing the source measurement file (e.g. data.json)."@en ;
+    rdfs:domain :RollingExperiment ;
+    rdfs:range  <http://purl.obolibrary.org/obo/IAO_0000100> .
+
+# ── Custom units ──────────────────────────────────────────────────────────────
+
+:unit/HRC a owl:NamedIndividual ;
+    rdfs:label "Rockwell C hardness"@en ;
+    rdfs:comment "Hardness unit on the Rockwell C scale (HRC). Used for work roll surface hardness."@en .
+
+# ── WorkRoll properties ───────────────────────────────────────────────────────
+
+:hasSerialNumber a owl:DatatypeProperty ;
+    rdfs:label "serial number"@en ;
+    rdfs:comment "Manufacturer serial number uniquely identifying this physical work roll. To be filled by the user."@en ;
+    rdfs:domain :WorkRoll ;
+    rdfs:range  xsd:string .
+
+:hasMaterial a owl:DatatypeProperty ;
+    rdfs:label "material"@en ;
+    rdfs:comment "Material grade of the work roll, e.g. high-chromium iron, high-speed steel. To be filled by the user."@en ;
+    rdfs:domain :WorkRoll ;
+    rdfs:range  xsd:string .
