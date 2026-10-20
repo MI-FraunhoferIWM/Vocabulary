@@ -1,4 +1,11 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <https://vocabulary.materials-data.space/aid4greenest> a owl:Ontology .
+
+<https://w3id.org/dsms/aid4greenest/gleeble/Test1> a skos:Concept ;
+    rdfs:label "Test1" ;
+    ns1:identifier "Test1" .
 
