@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/TargetEntityType> a owl:DatatypeProperty ;
+    rdfs:label "target entity type" ;
+    dcterms:description "Entity type expected by the next model in the chain: electron | atom | mesoscopic | continuum (CWA Table 7, §4.1)." ;
+    dcterms:identifier "TargetEntityType" ;
+    rdfs:comment "Entity type expected by the next model in the chain: electron | atom | mesoscopic | continuum (CWA Table 7, §4.1)." .
+

@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/SolverType> a owl:DatatypeProperty ;
+    rdfs:label "solver type" ;
+    dcterms:description "Solver category: Monte Carlo | Molecular Dynamics | FEM | DFT | SPH | multi-grid | adaptive | other (CWA Table 6, §3.1)." ;
+    dcterms:identifier "SolverType" ;
+    rdfs:comment "Solver category: Monte Carlo | Molecular Dynamics | FEM | DFT | SPH | multi-grid | adaptive | other (CWA Table 6, §3.1)." .
+

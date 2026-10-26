@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/Solver> a owl:Class ;
+    rdfs:label "Solver" ;
+    dcterms:description "A set of techniques used to numerically solve a physics-based model (CWA §3.10). Strictly separated from the model concept." ;
+    dcterms:identifier "Solver" ;
+    rdfs:comment "A set of techniques used to numerically solve a physics-based model (CWA §3.10). Strictly separated from the model concept." .
+

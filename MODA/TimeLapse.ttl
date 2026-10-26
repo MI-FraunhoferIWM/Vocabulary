@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/TimeLapse> a owl:DatatypeProperty ;
+    rdfs:label "time lapse" ;
+    dcterms:description "Physical duration of the situation to be simulated. Not the computational wall-clock time or time step (CWA Table 4, §1.4)." ;
+    dcterms:identifier "TimeLapse" ;
+    rdfs:comment "Physical duration of the situation to be simulated. Not the computational wall-clock time or time step (CWA Table 4, §1.4)." .
+

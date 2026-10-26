@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/HasUserCase> a owl:ObjectProperty ;
+    rdfs:label "has user case" ;
+    dcterms:description "Links a simulation to the user case description it addresses." ;
+    dcterms:identifier "HasUserCase" ;
+    rdfs:comment "Links a simulation to the user case description it addresses." .
+

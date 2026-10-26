@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/SimulatedInputDescription> a owl:DatatypeProperty ;
+    rdfs:label "simulated input description" ;
+    dcterms:description "Textual description of processed output from a preceding model used as input here. Empty for stand-alone simulations (CWA Table 5, §2.5)." ;
+    dcterms:identifier "SimulatedInputDescription" ;
+    rdfs:comment "Textual description of processed output from a preceding model used as input here. Empty for stand-alone simulations (CWA Table 5, §2.5)." .
+

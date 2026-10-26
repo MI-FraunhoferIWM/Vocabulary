@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/WorkflowType> a owl:DatatypeProperty ;
+    rdfs:label "workflow type" ;
+    dcterms:description "Topology of the simulation workflow: standalone | linking | iterative_coupling | tight_coupling (CWA Table 3)." ;
+    dcterms:identifier "WorkflowType" ;
+    rdfs:comment "Topology of the simulation workflow: standalone | linking | iterative_coupling | tight_coupling (CWA Table 3)." .
+

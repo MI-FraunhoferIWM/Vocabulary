@@ -1,0 +1,499 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://vocabulary.materials-data.space/moda> a owl:Ontology .
+
+<https://w3id.org/dsms/moda/AdditionalSolverParameters> a owl:DatatypeProperty ;
+    rdfs:label "additional solver parameters" ;
+    ns1:description "Internal numerical solver details: tolerances, convergence criteria, integrator options, under-relaxation parameters (CWA Table 6, §3.6)." ;
+    ns1:identifier "AdditionalSolverParameters" ;
+    rdfs:comment "Internal numerical solver details: tolerances, convergence criteria, integrator options, under-relaxation parameters (CWA Table 6, §3.6)." .
+
+<https://w3id.org/dsms/moda/AddressesUserCase> a owl:ObjectProperty ;
+    rdfs:label "addresses user case" ;
+    ns1:description "Indicates which user case aspect this model addresses in the simulation chain." ;
+    ns1:identifier "AddressesUserCase" ;
+    rdfs:comment "Indicates which user case aspect this model addresses in the simulation chain." .
+
+<https://w3id.org/dsms/moda/AspectDescription> a owl:DatatypeProperty ;
+    rdfs:label "aspect description" ;
+    ns1:description "Textual description of the user case aspect simulated by this model. No modelling information (CWA Table 4, §1.1)." ;
+    ns1:identifier "AspectDescription" ;
+    rdfs:comment "Textual description of the user case aspect simulated by this model. No modelling information (CWA Table 4, §1.1)." .
+
+<https://w3id.org/dsms/moda/AtomisticModel> a owl:Class ;
+    rdfs:label "Atomistic Model" ;
+    ns1:description "Physics-based model describing the behaviour of atom entities (CWA §3.7.2)." ;
+    ns1:identifier "AtomisticModel" ;
+    rdfs:comment "Physics-based model describing the behaviour of atom entities (CWA §3.7.2)." .
+
+<https://w3id.org/dsms/moda/BoundaryConditions> a owl:DatatypeProperty ;
+    rdfs:label "boundary conditions" ;
+    ns1:description "Computational translation of physical boundary conditions, e.g. periodic BC to simulate infinite domain (CWA Table 6, §3.5)." ;
+    ns1:identifier "BoundaryConditions" ;
+    rdfs:comment "Computational translation of physical boundary conditions, e.g. periodic BC to simulate infinite domain (CWA Table 6, §3.5)." .
+
+<https://w3id.org/dsms/moda/CGMDSolver> a owl:Class ;
+    rdfs:label "Coarse-Grained MD Solver" ;
+    ns1:identifier "CGMDSolver" .
+
+<https://w3id.org/dsms/moda/ChainPosition> a owl:DatatypeProperty ;
+    rdfs:label "chain position" ;
+    ns1:description "Ordering index of this model in the simulation chain (1 = first model)." ;
+    ns1:identifier "ChainPosition" ;
+    rdfs:comment "Ordering index of this model in the simulation chain (1 = first model)." .
+
+<https://w3id.org/dsms/moda/ComplementsPhysicsEquation> a owl:ObjectProperty ;
+    rdfs:label "complements physics equation" ;
+    ns1:description "Indicates which physics equation this materials relation provides parameter values for." ;
+    ns1:identifier "ComplementsPhysicsEquation" ;
+    rdfs:comment "Indicates which physics equation this materials relation provides parameter values for." .
+
+<https://w3id.org/dsms/moda/ComputationalDomain> a owl:DatatypeProperty ;
+    rdfs:label "computational domain" ;
+    ns1:description "How the physics equation, materials relation, and material are represented computationally (CWA Table 6, §3.4)." ;
+    ns1:identifier "ComputationalDomain" ;
+    rdfs:comment "How the physics equation, materials relation, and material are represented computationally (CWA Table 6, §3.4)." .
+
+<https://w3id.org/dsms/moda/ComputationalRepresentationOfMaterial> a owl:DatatypeProperty ;
+    rdfs:label "computational representation of material" ;
+    ns1:description "Computational representation of the material, e.g. atom positions, crystal lattice, mesh, particle distribution (CWA Table 6, §3.4)." ;
+    ns1:identifier "ComputationalRepresentationOfMaterial" .
+
+<https://w3id.org/dsms/moda/ComputationalRepresentationOfMaterialsRelation> a owl:DatatypeProperty ;
+    rdfs:label "computational representation of materials relation" ;
+    ns1:description "Computational representation of the materials relation (CWA Table 6, §3.4)." ;
+    ns1:identifier "ComputationalRepresentationOfMaterialsRelation" .
+
+<https://w3id.org/dsms/moda/ComputationalRepresentationOfPhysicsEquation> a owl:DatatypeProperty ;
+    rdfs:label "computational representation of physics equation" ;
+    ns1:description "Computational representation of the physics equation. Model information (physics) shall not be repeated here (CWA Table 6, §3.4)." ;
+    ns1:identifier "ComputationalRepresentationOfPhysicsEquation" .
+
+<https://w3id.org/dsms/moda/ConstitutiveEquation> a owl:Class ;
+    rdfs:label "Constitutive Equation" ;
+    ns1:description "Materials relation used in continuum models (CWA §3.4 example)." ;
+    ns1:identifier "ConstitutiveEquation" ;
+    rdfs:comment "Materials relation used in continuum models (CWA §3.4 example)." .
+
+<https://w3id.org/dsms/moda/ContinuumModel> a owl:Class ;
+    rdfs:label "Continuum Model" ;
+    ns1:description "Physics-based model describing the behaviour of continuum volume entities (CWA §3.7.4)." ;
+    ns1:identifier "ContinuumModel" ;
+    rdfs:comment "Physics-based model describing the behaviour of continuum volume entities (CWA §3.7.4)." .
+
+<https://w3id.org/dsms/moda/CouplingType> a owl:DatatypeProperty ;
+    rdfs:label "coupling type" ;
+    ns1:description "How this model connects to the previous one: standalone | linked | iterative_coupling | tight_coupling (CWA §3.13-3.16)." ;
+    ns1:identifier "CouplingType" ;
+    rdfs:comment "How this model connects to the previous one: standalone | linked | iterative_coupling | tight_coupling (CWA §3.13-3.16)." .
+
+<https://w3id.org/dsms/moda/DFTSolver> a owl:Class ;
+    rdfs:label "DFT Solver" ;
+    ns1:identifier "DFTSolver" .
+
+<https://w3id.org/dsms/moda/ElectronicModel> a owl:Class ;
+    rdfs:label "Electronic Model" ;
+    ns1:description "Physics-based model describing the behaviour of electron entities (CWA §3.7.1)." ;
+    ns1:identifier "ElectronicModel" ;
+    rdfs:comment "Physics-based model describing the behaviour of electron entities (CWA §3.7.1)." .
+
+<https://w3id.org/dsms/moda/EntityType> a owl:DatatypeProperty ;
+    rdfs:label "entity type" ;
+    ns1:description "Simulated entity type: electron entity | atom entity | mesoscopic entity | continuum volume entity (CWA Table 5, §2.2)." ;
+    ns1:identifier "EntityType" ;
+    rdfs:comment "Simulated entity type: electron entity | atom entity | mesoscopic entity | continuum volume entity (CWA Table 5, §2.2)." .
+
+<https://w3id.org/dsms/moda/EquationName> a owl:DatatypeProperty ;
+    rdfs:label "equation name" ;
+    ns1:description "Standard name of the physics equation, e.g. 'Newton's equations of motion' (CWA Table 5, §2.3)." ;
+    ns1:identifier "EquationName" ;
+    rdfs:comment "Standard name of the physics equation, e.g. 'Newton's equations of motion' (CWA Table 5, §2.3)." .
+
+<https://w3id.org/dsms/moda/FiniteElementSolver> a owl:Class ;
+    rdfs:label "Finite Element Solver" ;
+    ns1:identifier "FiniteElementSolver" .
+
+<https://w3id.org/dsms/moda/ForceField> a owl:Class ;
+    rdfs:label "Force Field" ;
+    ns1:description "Materials relation used in atomistic models (CWA §3.4 example)." ;
+    ns1:identifier "ForceField" ;
+    rdfs:comment "Materials relation used in atomistic models (CWA §3.4 example)." .
+
+<https://w3id.org/dsms/moda/FunctionalForm> a owl:DatatypeProperty ;
+    rdfs:label "functional form" ;
+    ns1:description "Mathematical form of the relation or a literature reference." ;
+    ns1:identifier "FunctionalForm" ;
+    rdfs:comment "Mathematical form of the relation or a literature reference." .
+
+<https://w3id.org/dsms/moda/Geometry> a owl:DatatypeProperty ;
+    rdfs:label "geometry" ;
+    ns1:description "Geometry of the physical system: size, form, drawing. Not the computational domain (CWA Table 4, §1.3)." ;
+    ns1:identifier "Geometry" ;
+    rdfs:comment "Geometry of the physical system: size, form, drawing. Not the computational domain (CWA Table 4, §1.3)." .
+
+<https://w3id.org/dsms/moda/Hamiltonian> a owl:Class ;
+    rdfs:label "Hamiltonian" ;
+    ns1:description "Materials relation used in electronic models (CWA §3.4 example)." ;
+    ns1:identifier "Hamiltonian" ;
+    rdfs:comment "Materials relation used in electronic models (CWA §3.4 example)." .
+
+<https://w3id.org/dsms/moda/HasChainOfModels> a owl:ObjectProperty ;
+    rdfs:label "hasChainOfModels" ;
+    ns1:identifier "HasChainOfModels" .
+
+<https://w3id.org/dsms/moda/HasMaterialModel> a owl:Class ;
+    rdfs:label "has Material Model" ;
+    ns1:identifier "HasMaterialModel" .
+
+<https://w3id.org/dsms/moda/HasMaterialsRelation> a owl:ObjectProperty ;
+    rdfs:label "has materials relation" ;
+    ns1:description "Links a physics-based model to one of its materials relations." ;
+    ns1:identifier "HasMaterialsRelation" ;
+    rdfs:comment "Links a physics-based model to one of its materials relations." .
+
+<https://w3id.org/dsms/moda/HasModel> a owl:ObjectProperty ;
+    rdfs:label "has model" ;
+    ns1:description "Links a simulation to one physics-based model in its chain." ;
+    ns1:identifier "HasModel" ;
+    rdfs:comment "Links a simulation to one physics-based model in its chain." .
+
+<https://w3id.org/dsms/moda/HasModellingDataWorkflow> a owl:ObjectProperty ;
+    rdfs:label "has modelling data workflow" ;
+    ns1:identifier "HasModellingDataWorkflow" .
+
+<https://w3id.org/dsms/moda/HasOutputFile> a owl:ObjectProperty ;
+    rdfs:label "has output file" ;
+    ns1:description "Links a post-processing step to a file attachment containing output data." ;
+    ns1:identifier "HasOutputFile" ;
+    rdfs:comment "Links a post-processing step to a file attachment containing output data." .
+
+<https://w3id.org/dsms/moda/HasParameterQuantity> a owl:DatatypeProperty ;
+    rdfs:label "has parameter quantity" ;
+    ns1:description "Physics quantities not solved for (parameters). Each requires a materials relation to provide a value (CWA Table 5, §2.3)." ;
+    ns1:identifier "HasParameterQuantity" ;
+    rdfs:comment "Physics quantities not solved for (parameters). Each requires a materials relation to provide a value (CWA Table 5, §2.3)." .
+
+<https://w3id.org/dsms/moda/HasPhysicsEquation> a owl:ObjectProperty ;
+    rdfs:label "has physics equation" ;
+    ns1:description "Links a physics-based model to its governing physics equation." ;
+    ns1:identifier "HasPhysicsEquation" ;
+    rdfs:comment "Links a physics-based model to its governing physics equation." .
+
+<https://w3id.org/dsms/moda/HasPhysicsQuantity> a owl:ObjectProperty ;
+    rdfs:label "has physics quantity" ;
+    ns1:description "Parameters and variables appearing in this materials relation (CWA Table 5, §2.4)." ;
+    ns1:identifier "HasPhysicsQuantity" ;
+    rdfs:comment "Parameters and variables appearing in this materials relation (CWA Table 5, §2.4)." .
+
+<https://w3id.org/dsms/moda/HasPostProcessing> a owl:ObjectProperty ;
+    rdfs:label "has post-processing" ;
+    ns1:description "Links a physics-based model to its post-processing step." ;
+    ns1:identifier "HasPostProcessing" ;
+    rdfs:comment "Links a physics-based model to its post-processing step." .
+
+<https://w3id.org/dsms/moda/HasRelationParameter> a owl:ObjectProperty ;
+    rdfs:label "has Relation Parameter " ;
+    ns1:identifier "HasRelationParameter" .
+
+<https://w3id.org/dsms/moda/HasSoftwareTool> a owl:ObjectProperty ;
+    rdfs:label "has software tool" ;
+    ns1:identifier "HasSoftwareTool" .
+
+<https://w3id.org/dsms/moda/HasSolver> a owl:ObjectProperty ;
+    rdfs:label "has solver" ;
+    ns1:description "Links a physics-based model to the numerical solver used to solve it." ;
+    ns1:identifier "HasSolver" ;
+    rdfs:comment "Links a physics-based model to the numerical solver used to solve it." .
+
+<https://w3id.org/dsms/moda/HasSymbol> a owl:DatatypeProperty ;
+    rdfs:label "has symbol" ;
+    ns1:identifier "HasSymbol" .
+
+<https://w3id.org/dsms/moda/HasUserCase> a owl:ObjectProperty ;
+    rdfs:label "has user case" ;
+    ns1:description "Links a simulation to the user case description it addresses." ;
+    ns1:identifier "HasUserCase" ;
+    rdfs:comment "Links a simulation to the user case description it addresses." .
+
+<https://w3id.org/dsms/moda/HasVariableQuantity> a owl:DatatypeProperty ;
+    rdfs:label "has variable quantity" ;
+    ns1:description "Physics quantities the equation solves for (variables). These form the raw output (CWA Table 5, §2.3)." ;
+    ns1:identifier "HasVariableQuantity" ;
+    rdfs:comment "Physics quantities the equation solves for (variables). These form the raw output (CWA Table 5, §2.3)." .
+
+<https://w3id.org/dsms/moda/InteractionPotential> a owl:Class ;
+    rdfs:label "Mesoscopic Interaction Potential" ;
+    ns1:description "Materials relation used in mesoscopic models (CWA §3.4 example)." ;
+    ns1:identifier "InteractionPotential" ;
+    rdfs:comment "Materials relation used in mesoscopic models (CWA §3.4 example)." .
+
+<https://w3id.org/dsms/moda/IsMaterialsRelationOf> a owl:ObjectProperty ;
+    rdfs:label "is materials relation of" ;
+    ns1:identifier "IsMaterialsRelationOf" .
+
+<https://w3id.org/dsms/moda/IsModelOf> a owl:ObjectProperty ;
+    rdfs:label "is model of" ;
+    ns1:identifier "IsModelOf" .
+
+<https://w3id.org/dsms/moda/IsPhysicsEquationOf> a owl:ObjectProperty ;
+    rdfs:label "is physics equation of" ;
+    ns1:identifier "IsPhysicsEquationOf" .
+
+<https://w3id.org/dsms/moda/IsPostProcessingOf> a owl:ObjectProperty ;
+    rdfs:label "is post-processing of" ;
+    ns1:identifier "IsPostProcessingOf" .
+
+<https://w3id.org/dsms/moda/IsSolverOf> a owl:ObjectProperty ;
+    rdfs:label "is solver of" ;
+    ns1:identifier "IsSolverOf" .
+
+<https://w3id.org/dsms/moda/IsUserCaseOf> a owl:ObjectProperty ;
+    rdfs:label "is user case of" ;
+    ns1:identifier "IsUserCaseOf" .
+
+<https://w3id.org/dsms/moda/MarginOfError> a owl:DatatypeProperty ;
+    rdfs:label "margin of error" ;
+    ns1:description "Accuracy in % of the property calculated, with explanation for an industrial end-user (CWA Table 7, §4.3)." ;
+    ns1:identifier "MarginOfError" ;
+    rdfs:comment "Accuracy in % of the property calculated, with explanation for an industrial end-user (CWA Table 7, §4.3)." .
+
+<https://w3id.org/dsms/moda/MaterialDescription> a owl:DatatypeProperty ;
+    rdfs:label "material description" ;
+    ns1:description "Physical and/or chemical description of the material to be modelled (CWA Table 4, §1.2)." ;
+    ns1:identifier "MaterialDescription" ;
+    rdfs:comment "Physical and/or chemical description of the material to be modelled (CWA Table 4, §1.2)." .
+
+<https://w3id.org/dsms/moda/MaterialRelationParameter> a owl:Class ;
+    rdfs:label "Material relation parameter" ;
+    ns1:identifier "MaterialRelationParameter" .
+
+<https://w3id.org/dsms/moda/MaterialsRelation> a owl:Class ;
+    rdfs:label "Materials Relation" ;
+    ns1:description "A materials-specific equation providing values for parameters in the physics equation (CWA §3.4). Valid only for the class of materials for which it was formulated." ;
+    ns1:identifier "MaterialsRelation" ;
+    rdfs:comment "A materials-specific equation providing values for parameters in the physics equation (CWA §3.4). Valid only for the class of materials for which it was formulated." .
+
+<https://w3id.org/dsms/moda/MathematicalForm> a owl:DatatypeProperty ;
+    rdfs:label "mathematical form" ;
+    ns1:description "LaTeX or plain-text representation of the equation (CWA Table 5, §2.3)." ;
+    ns1:identifier "MathematicalForm" ;
+    rdfs:comment "LaTeX or plain-text representation of the equation (CWA Table 5, §2.3)." .
+
+<https://w3id.org/dsms/moda/MesoscopicModel> a owl:Class ;
+    rdfs:label "Mesoscopic Model" ;
+    ns1:description "Physics-based model describing the behaviour of mesoscopic entities (CWA §3.7.3)." ;
+    ns1:identifier "MesoscopicModel" ;
+    rdfs:comment "Physics-based model describing the behaviour of mesoscopic entities (CWA §3.7.3)." .
+
+<https://w3id.org/dsms/moda/ModelName> a owl:DatatypeProperty ;
+    rdfs:label "model name" ;
+    ns1:description "Name as it appears in the RoMM content list (CWA Table 5, §2.1)." ;
+    ns1:identifier "ModelName" ;
+    rdfs:comment "Name as it appears in the RoMM content list (CWA Table 5, §2.1)." .
+
+<https://w3id.org/dsms/moda/ModelType> a owl:DatatypeProperty ;
+    rdfs:label "model type" ;
+    ns1:description "Classification: electronic | atomistic | mesoscopic | continuum (CWA §3.7)." ;
+    ns1:identifier "ModelType" ;
+    rdfs:comment "Classification: electronic | atomistic | mesoscopic | continuum (CWA §3.7)." .
+
+<https://w3id.org/dsms/moda/ModellingData> a owl:Class ;
+    rdfs:label "Modelling data" ;
+    ns1:identifier "ModellingData" .
+
+<https://w3id.org/dsms/moda/ModellingDataWorkflow> a owl:Class ;
+    rdfs:label "Modelling data workflow" ;
+    ns1:identifier "ModellingDataWorkflow" .
+
+<https://w3id.org/dsms/moda/MolecularDynamicsSolver> a owl:Class ;
+    rdfs:label "Molecular Dynamics Solver" ;
+    ns1:identifier "MolecularDynamicsSolver" .
+
+<https://w3id.org/dsms/moda/MonteCarloSolver> a owl:Class ;
+    rdfs:label "Monte Carlo Solver" ;
+    ns1:identifier "MonteCarloSolver" .
+
+<https://w3id.org/dsms/moda/NumericalTimeStep> a owl:DatatypeProperty ;
+    rdfs:label "numerical time step" ;
+    ns1:description "Numerical integration time step used by the solver. Distinct from the physical time lapse (CWA Table 6, §3.3)." ;
+    ns1:identifier "NumericalTimeStep" ;
+    rdfs:comment "Numerical integration time step used by the solver. Distinct from the physical time lapse (CWA Table 6, §3.3)." .
+
+<https://w3id.org/dsms/moda/OutputType> a owl:DatatypeProperty ;
+    rdfs:label "output type" ;
+    ns1:description "Type of output produced: calculated_values | materials_relation | visualization (CWA §3.12)." ;
+    ns1:identifier "OutputType" ;
+    rdfs:comment "Type of output produced: calculated_values | materials_relation | visualization (CWA §3.12)." .
+
+<https://w3id.org/dsms/moda/PhysicsBasedModel> a owl:Class ;
+    rdfs:label "Physics-Based Model" ;
+    ns1:description "A solvable set of one physics equation and one or more materials relations (CWA 17284:2018 §3.5). Classified by the entity type whose behaviour it describes." ;
+    ns1:identifier "PhysicsBasedModel" ;
+    rdfs:comment "A solvable set of one physics equation and one or more materials relations (CWA 17284:2018 §3.5). Classified by the entity type whose behaviour it describes." .
+
+<https://w3id.org/dsms/moda/PhysicsEquation> a owl:Class ;
+    rdfs:label "Physics Equation" ;
+    ns1:description "A mathematical equation based on fundamental physics theory, generic and independent of the specific material (CWA §3.3). Contains variables (solved for) and parameters (supplied by materials relations)." ;
+    ns1:identifier "PhysicsEquation" ;
+    rdfs:comment "A mathematical equation based on fundamental physics theory, generic and independent of the specific material (CWA §3.3). Contains variables (solved for) and parameters (supplied by materials relations)." .
+
+<https://w3id.org/dsms/moda/PhysicsEquationOverview> a owl:DatatypeProperty ;
+    rdfs:label "physics equation overview" ;
+    ns1:identifier "PhysicsEquationOverview" .
+
+<https://w3id.org/dsms/moda/PhysicsQuantity> a owl:Class ;
+    rdfs:label "Physics quantity" ;
+    ns1:identifier "PhysicsQuantity" .
+
+<https://w3id.org/dsms/moda/PostProcessing> a owl:Class ;
+    rdfs:label "Post-Processing" ;
+    ns1:description "Operations on the raw output of a solver that do not alter the physical system state (CWA §3.12). Produces the processed output (light green circle in MODA workflow)." ;
+    ns1:identifier "PostProcessing" ;
+    rdfs:comment "Operations on the raw output of a solver that do not alter the physical system state (CWA §3.12). Produces the processed output (light green circle in MODA workflow)." .
+
+<https://w3id.org/dsms/moda/PostProcessingMethodology> a owl:DatatypeProperty ;
+    rdfs:label "post-processing methodology" ;
+    ns1:description "Mathematics and/or physics used in post-processing, e.g. volume averaging for homogenisation (CWA Table 7, §4.2)." ;
+    ns1:identifier "PostProcessingMethodology" ;
+    rdfs:comment "Mathematics and/or physics used in post-processing, e.g. volume averaging for homogenisation (CWA Table 7, §4.2)." .
+
+<https://w3id.org/dsms/moda/ProcessConditions> a owl:DatatypeProperty ;
+    rdfs:label "process conditions" ;
+    ns1:description "Manufacturing or in-service conditions: heated walls, external pressures, bending forces (CWA Table 4, §1.5)." ;
+    ns1:identifier "ProcessConditions" ;
+    rdfs:comment "Manufacturing or in-service conditions: heated walls, external pressures, bending forces (CWA Table 4, §1.5)." .
+
+<https://w3id.org/dsms/moda/ProcessedOutput> a owl:DatatypeProperty ;
+    rdfs:label "processed output" ;
+    ns1:description "Specification of the post-processing output (light green circle in MODA workflow diagram) (CWA Table 7, §4.1)." ;
+    ns1:identifier "ProcessedOutput" ;
+    rdfs:comment "Specification of the post-processing output (light green circle in MODA workflow diagram) (CWA Table 7, §4.1)." .
+
+<https://w3id.org/dsms/moda/ProjectAcronym> a owl:DatatypeProperty ;
+    rdfs:label "project acronym" ;
+    ns1:description "Short acronym of the project this simulation belongs to (CWA MODA Heading)." ;
+    ns1:identifier "ProjectAcronym" ;
+    rdfs:comment "Short acronym of the project this simulation belongs to (CWA MODA Heading)." .
+
+<https://w3id.org/dsms/moda/ProvidesParameter> a owl:DatatypeProperty ;
+    rdfs:label "provides parameter" ;
+    ns1:description "Name of the physics equation parameter this materials relation supplies a value for (CWA §3.4)." ;
+    ns1:identifier "ProvidesParameter" ;
+    rdfs:comment "Name of the physics equation parameter this materials relation supplies a value for (CWA §3.4)." .
+
+<https://w3id.org/dsms/moda/ProvidesValueFor> a owl:ObjectProperty ;
+    rdfs:label "provides value for " ;
+    ns1:identifier "ProvidesValueFor" .
+
+<https://w3id.org/dsms/moda/RawOutputDescription> a owl:DatatypeProperty ;
+    rdfs:label "raw output description" ;
+    ns1:description "Description of the raw solver output: values of the variable quantities calculated by solving the PE (dark green box in MODA workflow) (CWA Table 5, §2.3)." ;
+    ns1:identifier "RawOutputDescription" ;
+    rdfs:comment "Description of the raw solver output: values of the variable quantities calculated by solving the PE (dark green box in MODA workflow) (CWA Table 5, §2.3)." .
+
+<https://w3id.org/dsms/moda/RefersToPhysicsQuantity> a owl:ObjectProperty ;
+    rdfs:label "refers to Physics quantity " ;
+    ns1:identifier "RefersToPhysicsQuantity" .
+
+<https://w3id.org/dsms/moda/RelationName> a owl:DatatypeProperty ;
+    rdfs:label "relation name" ;
+    ns1:description "Canonical name, e.g. 'Lennard-Jones 12-6 potential' (CWA Table 5, §2.4)." ;
+    ns1:identifier "RelationName" ;
+    rdfs:comment "Canonical name, e.g. 'Lennard-Jones 12-6 potential' (CWA Table 5, §2.4)." .
+
+<https://w3id.org/dsms/moda/RelationType> a owl:DatatypeProperty ;
+    rdfs:label "relation type" ;
+    ns1:description "Category: Hamiltonian | force_field | interaction_potential | constitutive_equation | other (CWA §3.4 examples)." ;
+    ns1:identifier "RelationType" ;
+    rdfs:comment "Category: Hamiltonian | force_field | interaction_potential | constitutive_equation | other (CWA §3.4 examples)." .
+
+<https://w3id.org/dsms/moda/SPHSolver> a owl:Class ;
+    rdfs:label "Smoothed Particle Hydrodynamics Solver" ;
+    ns1:identifier "SPHSolver" .
+
+<https://w3id.org/dsms/moda/SimulatedInputDescription> a owl:DatatypeProperty ;
+    rdfs:label "simulated input description" ;
+    ns1:description "Textual description of processed output from a preceding model used as input here. Empty for stand-alone simulations (CWA Table 5, §2.5)." ;
+    ns1:identifier "SimulatedInputDescription" ;
+    rdfs:comment "Textual description of processed output from a preceding model used as input here. Empty for stand-alone simulations (CWA Table 5, §2.5)." .
+
+<https://w3id.org/dsms/moda/SimulatedInputFrom> a owl:ObjectProperty ;
+    rdfs:label "simulated input from" ;
+    ns1:description "Links a physics equation's simulated input (§2.5) to the post-processing step of the preceding model that produced it." ;
+    ns1:identifier "SimulatedInputFrom" ;
+    rdfs:comment "Links a physics equation's simulated input (§2.5) to the post-processing step of the preceding model that produced it." .
+
+<https://w3id.org/dsms/moda/Simulation> a owl:Class ;
+    rdfs:label "Simulation" ;
+    ns1:description "A complete set of activities to arrive at a calculated answer to a specific question (CWA 17284:2018 §3.17). One MODA document corresponds to one Simulation instance." ;
+    ns1:identifier "Simulation" ;
+    rdfs:comment "A complete set of activities to arrive at a calculated answer to a specific question (CWA 17284:2018 §3.17). One MODA document corresponds to one Simulation instance." .
+
+<https://w3id.org/dsms/moda/Solver> a owl:Class ;
+    rdfs:label "Solver" ;
+    ns1:description "A set of techniques used to numerically solve a physics-based model (CWA §3.10). Strictly separated from the model concept." ;
+    ns1:identifier "Solver" ;
+    rdfs:comment "A set of techniques used to numerically solve a physics-based model (CWA §3.10). Strictly separated from the model concept." .
+
+<https://w3id.org/dsms/moda/SolverName> a owl:DatatypeProperty ;
+    rdfs:label "solver name" ;
+    ns1:description "Name of the solver technique, e.g. 'Verlet integrator', 'multi-grid' (CWA Table 6, §3.1)." ;
+    ns1:identifier "SolverName" ;
+    rdfs:comment "Name of the solver technique, e.g. 'Verlet integrator', 'multi-grid' (CWA Table 6, §3.1)." .
+
+<https://w3id.org/dsms/moda/SolverType> a owl:DatatypeProperty ;
+    rdfs:label "solver type" ;
+    ns1:description "Solver category: Monte Carlo | Molecular Dynamics | FEM | DFT | SPH | multi-grid | adaptive | other (CWA Table 6, §3.1)." ;
+    ns1:identifier "SolverType" ;
+    rdfs:comment "Solver category: Monte Carlo | Molecular Dynamics | FEM | DFT | SPH | multi-grid | adaptive | other (CWA Table 6, §3.1)." .
+
+<https://w3id.org/dsms/moda/TargetEntityType> a owl:DatatypeProperty ;
+    rdfs:label "target entity type" ;
+    ns1:description "Entity type expected by the next model in the chain: electron | atom | mesoscopic | continuum (CWA Table 7, §4.1)." ;
+    ns1:identifier "TargetEntityType" ;
+    rdfs:comment "Entity type expected by the next model in the chain: electron | atom | mesoscopic | continuum (CWA Table 7, §4.1)." .
+
+<https://w3id.org/dsms/moda/Term1> a owl:Class ;
+    rdfs:label "Term1" ;
+    ns1:description "rrrr" ;
+    ns1:identifier "Term1" ;
+    ns1:source "rrr" .
+
+<https://w3id.org/dsms/moda/TimeLapse> a owl:DatatypeProperty ;
+    rdfs:label "time lapse" ;
+    ns1:description "Physical duration of the situation to be simulated. Not the computational wall-clock time or time step (CWA Table 4, §1.4)." ;
+    ns1:identifier "TimeLapse" ;
+    rdfs:comment "Physical duration of the situation to be simulated. Not the computational wall-clock time or time step (CWA Table 4, §1.4)." .
+
+<https://w3id.org/dsms/moda/UserCase> a owl:Class ;
+    rdfs:label "User Case" ;
+    ns1:description "The specific question or problem being simulated, described independently of any modelling approach (CWA 17284:2018 §3.17 implied; CWA Table 4)." ;
+    ns1:identifier "UserCase" ;
+    rdfs:comment "The specific question or problem being simulated, described independently of any modelling approach (CWA 17284:2018 §3.17 implied; CWA Table 4)." .
+
+<https://w3id.org/dsms/moda/UserCaseDescription> a owl:DatatypeProperty ;
+    rdfs:label "user case description" ;
+    ns1:description "One-sentence description of the user case. No modelling information allowed (CWA Table 2, Row 1)." ;
+    ns1:identifier "UserCaseDescription" ;
+    rdfs:comment "One-sentence description of the user case. No modelling information allowed (CWA Table 2, Row 1)." .
+
+<https://w3id.org/dsms/moda/ValidForMaterialClass> a owl:DatatypeProperty ;
+    rdfs:label "valid for material class" ;
+    ns1:description "Class of materials for which this relation is valid. Specificity distinguishes MR from PE (CWA §3.4, Note 5)." ;
+    ns1:identifier "ValidForMaterialClass" ;
+    rdfs:comment "Class of materials for which this relation is valid. Specificity distinguishes MR from PE (CWA §3.4, Note 5)." .
+
+<https://w3id.org/dsms/moda/WorkflowRationale> a owl:DatatypeProperty ;
+    rdfs:label "workflow rationale" ;
+    ns1:description "Textual rationale for the chosen model chain and workflow instead of other possible approaches (CWA Table 2, Row 5)." ;
+    ns1:identifier "WorkflowRationale" ;
+    rdfs:comment "Textual rationale for the chosen model chain and workflow instead of other possible approaches (CWA Table 2, Row 5)." .
+
+<https://w3id.org/dsms/moda/WorkflowType> a owl:DatatypeProperty ;
+    rdfs:label "workflow type" ;
+    ns1:description "Topology of the simulation workflow: standalone | linking | iterative_coupling | tight_coupling (CWA Table 3)." ;
+    ns1:identifier "WorkflowType" ;
+    rdfs:comment "Topology of the simulation workflow: standalone | linking | iterative_coupling | tight_coupling (CWA Table 3)." .
+

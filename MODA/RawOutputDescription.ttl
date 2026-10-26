@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/RawOutputDescription> a owl:DatatypeProperty ;
+    rdfs:label "raw output description" ;
+    dcterms:description "Description of the raw solver output: values of the variable quantities calculated by solving the PE (dark green box in MODA workflow) (CWA Table 5, §2.3)." ;
+    dcterms:identifier "RawOutputDescription" ;
+    rdfs:comment "Description of the raw solver output: values of the variable quantities calculated by solving the PE (dark green box in MODA workflow) (CWA Table 5, §2.3)." .
+

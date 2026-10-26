@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/ModelName> a owl:DatatypeProperty ;
+    rdfs:label "model name" ;
+    dcterms:description "Name as it appears in the RoMM content list (CWA Table 5, §2.1)." ;
+    dcterms:identifier "ModelName" ;
+    rdfs:comment "Name as it appears in the RoMM content list (CWA Table 5, §2.1)." .
+

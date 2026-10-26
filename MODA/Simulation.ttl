@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/Simulation> a owl:Class ;
+    rdfs:label "Simulation" ;
+    dcterms:description "A complete set of activities to arrive at a calculated answer to a specific question (CWA 17284:2018 §3.17). One MODA document corresponds to one Simulation instance." ;
+    dcterms:identifier "Simulation" ;
+    rdfs:comment "A complete set of activities to arrive at a calculated answer to a specific question (CWA 17284:2018 §3.17). One MODA document corresponds to one Simulation instance." .
+

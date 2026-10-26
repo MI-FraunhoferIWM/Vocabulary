@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/EntityType> a owl:DatatypeProperty ;
+    rdfs:label "entity type" ;
+    dcterms:description "Simulated entity type: electron entity | atom entity | mesoscopic entity | continuum volume entity (CWA Table 5, §2.2)." ;
+    dcterms:identifier "EntityType" ;
+    rdfs:comment "Simulated entity type: electron entity | atom entity | mesoscopic entity | continuum volume entity (CWA Table 5, §2.2)." .
+

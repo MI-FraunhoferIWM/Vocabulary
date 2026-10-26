@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/RelationType> a owl:DatatypeProperty ;
+    rdfs:label "relation type" ;
+    dcterms:description "Category: Hamiltonian | force_field | interaction_potential | constitutive_equation | other (CWA §3.4 examples)." ;
+    dcterms:identifier "RelationType" ;
+    rdfs:comment "Category: Hamiltonian | force_field | interaction_potential | constitutive_equation | other (CWA §3.4 examples)." .
+

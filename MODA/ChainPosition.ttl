@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/ChainPosition> a owl:DatatypeProperty ;
+    rdfs:label "chain position" ;
+    dcterms:description "Ordering index of this model in the simulation chain (1 = first model)." ;
+    dcterms:identifier "ChainPosition" ;
+    rdfs:comment "Ordering index of this model in the simulation chain (1 = first model)." .
+

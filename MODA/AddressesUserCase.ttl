@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/AddressesUserCase> a owl:ObjectProperty ;
+    rdfs:label "addresses user case" ;
+    dcterms:description "Indicates which user case aspect this model addresses in the simulation chain." ;
+    dcterms:identifier "AddressesUserCase" ;
+    rdfs:comment "Indicates which user case aspect this model addresses in the simulation chain." .
+

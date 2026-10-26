@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/ComputationalRepresentationOfMaterial> a owl:DatatypeProperty ;
+    rdfs:label "computational representation of material" ;
+    dcterms:description "Computational representation of the material, e.g. atom positions, crystal lattice, mesh, particle distribution (CWA Table 6, §3.4)." ;
+    dcterms:identifier "ComputationalRepresentationOfMaterial" .
+

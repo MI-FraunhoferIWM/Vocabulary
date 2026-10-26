@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/OutputType> a owl:DatatypeProperty ;
+    rdfs:label "output type" ;
+    dcterms:description "Type of output produced: calculated_values | materials_relation | visualization (CWA §3.12)." ;
+    dcterms:identifier "OutputType" ;
+    rdfs:comment "Type of output produced: calculated_values | materials_relation | visualization (CWA §3.12)." .
+

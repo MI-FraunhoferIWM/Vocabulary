@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/PhysicsEquation> a owl:Class ;
+    rdfs:label "Physics Equation" ;
+    dcterms:description "A mathematical equation based on fundamental physics theory, generic and independent of the specific material (CWA §3.3). Contains variables (solved for) and parameters (supplied by materials relations)." ;
+    dcterms:identifier "PhysicsEquation" ;
+    rdfs:comment "A mathematical equation based on fundamental physics theory, generic and independent of the specific material (CWA §3.3). Contains variables (solved for) and parameters (supplied by materials relations)." .
+

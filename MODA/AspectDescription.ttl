@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/AspectDescription> a owl:DatatypeProperty ;
+    rdfs:label "aspect description" ;
+    dcterms:description "Textual description of the user case aspect simulated by this model. No modelling information (CWA Table 4, §1.1)." ;
+    dcterms:identifier "AspectDescription" ;
+    rdfs:comment "Textual description of the user case aspect simulated by this model. No modelling information (CWA Table 4, §1.1)." .
+

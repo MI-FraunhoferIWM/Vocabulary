@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/MaterialDescription> a owl:DatatypeProperty ;
+    rdfs:label "material description" ;
+    dcterms:description "Physical and/or chemical description of the material to be modelled (CWA Table 4, §1.2)." ;
+    dcterms:identifier "MaterialDescription" ;
+    rdfs:comment "Physical and/or chemical description of the material to be modelled (CWA Table 4, §1.2)." .
+

@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/MesoscopicModel> a owl:Class ;
+    rdfs:label "Mesoscopic Model" ;
+    dcterms:description "Physics-based model describing the behaviour of mesoscopic entities (CWA §3.7.3)." ;
+    dcterms:identifier "MesoscopicModel" ;
+    rdfs:comment "Physics-based model describing the behaviour of mesoscopic entities (CWA §3.7.3)." .
+

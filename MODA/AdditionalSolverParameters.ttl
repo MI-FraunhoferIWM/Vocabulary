@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/AdditionalSolverParameters> a owl:DatatypeProperty ;
+    rdfs:label "additional solver parameters" ;
+    dcterms:description "Internal numerical solver details: tolerances, convergence criteria, integrator options, under-relaxation parameters (CWA Table 6, §3.6)." ;
+    dcterms:identifier "AdditionalSolverParameters" ;
+    rdfs:comment "Internal numerical solver details: tolerances, convergence criteria, integrator options, under-relaxation parameters (CWA Table 6, §3.6)." .
+

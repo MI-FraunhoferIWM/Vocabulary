@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/dsms/moda/RelationName> a owl:DatatypeProperty ;
+    rdfs:label "relation name" ;
+    dcterms:description "Canonical name, e.g. 'Lennard-Jones 12-6 potential' (CWA Table 5, §2.4)." ;
+    dcterms:identifier "RelationName" ;
+    rdfs:comment "Canonical name, e.g. 'Lennard-Jones 12-6 potential' (CWA Table 5, §2.4)." .
+
